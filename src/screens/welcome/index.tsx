@@ -1,10 +1,12 @@
-import { View, Text } from 'react-native';
 import React from 'react';
+import { View, Text } from 'react-native';
+import styles from './styles';
+import { AppLogo } from 'assets';
 
 const WelcomeScreen = () => {
   return (
-    <View>
-      <Text style={{ color: 'black' }}>WelcomeScreen</Text>
+    <View style={styles.container}>
+      <AppLogo />
     </View>
   );
 };

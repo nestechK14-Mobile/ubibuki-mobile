@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import MainRouter from './router';
 import { LogBox, Text, TextInput } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
+import { RootSiblingParent } from 'react-native-root-siblings';
 
 interface TextWithDefaultProps extends Text {
   defaultProps?: { allowFontScaling?: boolean };
@@ -32,6 +33,7 @@ if (__DEV__) {
       }
     };
   }
+  console.log(() => {});
 }
 
 const App = () => {
@@ -41,7 +43,9 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <MainRouter />
+      <RootSiblingParent>
+        <MainRouter />
+      </RootSiblingParent>
     </NavigationContainer>
   );
 };
