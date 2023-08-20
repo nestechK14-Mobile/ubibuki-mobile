@@ -2,10 +2,10 @@ import { View, Text } from 'react-native';
 import React from 'react';
 
 import { HomeScreen, DetailScreen, WelcomeScreen } from 'screens';
-import { SCREEN_NAME } from 'constants';
+import { SCREEN_NAME, MainStackParams } from 'constants';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const MainStack = createNativeStackNavigator();
+const MainStack = createNativeStackNavigator<MainStackParams>();
 
 const defaultConfig = {
   headerShown: false,
