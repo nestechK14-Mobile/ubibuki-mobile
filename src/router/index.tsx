@@ -7,9 +7,14 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const MainStack = createNativeStackNavigator();
 
+const defaultConfig = {
+  headerShown: false,
+  gestureEnabled: false
+};
+
 const MainRouter = () => {
   return (
-    <MainStack.Navigator>
+    <MainStack.Navigator screenOptions={{ ...defaultConfig }}>
       <MainStack.Screen name={SCREEN_NAME.WELCOME_SCREEN} component={WelcomeScreen} />
       <MainStack.Screen name={SCREEN_NAME.HOME_SCREEN} component={HomeScreen} />
       <MainStack.Screen name={SCREEN_NAME.DETAIL_SCREEN} component={DetailScreen} />
