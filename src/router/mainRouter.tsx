@@ -1,9 +1,10 @@
-import { View, Text } from 'react-native';
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 
 import { HomeScreen, DetailScreen, WelcomeScreen } from 'screens';
-import { SCREEN_NAME, MainStackParams } from 'constants';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { MainStackParams } from 'constants';
+import { SCREEN_NAME } from 'constants';
+import { initLanguage } from '../i18n';
 
 const MainStack = createNativeStackNavigator<MainStackParams>();
 
@@ -13,6 +14,10 @@ const defaultConfig = {
 };
 
 const MainRouter = () => {
+  useLayoutEffect(() => {
+    initLanguage();
+  }, []);
+
   return (
     <MainStack.Navigator screenOptions={{ ...defaultConfig }}>
       <MainStack.Screen name={SCREEN_NAME.WELCOME_SCREEN} component={WelcomeScreen} />
