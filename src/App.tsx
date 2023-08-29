@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import MainRouter from './router';
 import { LogBox, Text, TextInput } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import { RootSiblingParent } from 'react-native-root-siblings';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import MainRouter from './router';
 
 interface TextWithDefaultProps extends Text {
   defaultProps?: { allowFontScaling?: boolean };
@@ -14,11 +16,11 @@ interface TextInputWithDefaultProps extends TextInput {
 
 (Text as unknown as TextWithDefaultProps).defaultProps =
   (Text as unknown as TextWithDefaultProps).defaultProps || {};
-(Text as unknown as TextWithDefaultProps).defaultProps!.allowFontScaling = false;
+(Text as unknown as TextWithDefaultProps).defaultProps.allowFontScaling = false;
 
 (TextInput as unknown as TextInputWithDefaultProps).defaultProps =
   (TextInput as unknown as TextInputWithDefaultProps).defaultProps || {};
-(TextInput as unknown as TextInputWithDefaultProps).defaultProps!.allowFontScaling = false;
+(TextInput as unknown as TextInputWithDefaultProps).defaultProps.allowFontScaling = false;
 
 LogBox.ignoreAllLogs();
 if (__DEV__) {
@@ -33,7 +35,7 @@ if (__DEV__) {
       }
     };
   }
-  console.log(() => {});
+  console.log(() => null);
 }
 
 const App = () => {
@@ -44,7 +46,9 @@ const App = () => {
   return (
     <NavigationContainer>
       <RootSiblingParent>
-        <MainRouter />
+        <Provider store={store}>
+          <MainRouter />
+        </Provider>
       </RootSiblingParent>
     </NavigationContainer>
   );

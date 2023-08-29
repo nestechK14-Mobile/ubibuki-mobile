@@ -9,4 +9,12 @@ export type MainStackParams = {
   Home?: undefined;
   Detail?: undefined;
 };
+
 export type StackNavigationMain = NavigationProp<MainStackParams, any>;
+
+export interface IPropsText {
+  children?: string;
+  translate?: boolean;
+  style?: object;
+  numberOfLines?: number;
+}
