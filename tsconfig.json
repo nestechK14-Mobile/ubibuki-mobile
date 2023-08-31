@@ -14,6 +14,7 @@
     "skipLibCheck": false,
     "paths": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "screens": ["./src/screens/*"],
       "constants": ["./src/constants/*"],
       "router": ["./src/router/*"],
@@ -27,6 +28,9 @@
       "assets/*": ["./src/assets/*"],
       "components/*": ["./src/components/*"]
 >>>>>>> nam_nguyen/bai_tap_01/code_ui_basic_home_screen
+=======
+      "@app/*": ["./src/*"]
+>>>>>>> 45b7991f3c11a422b6f287b05dec917a258ee792
     }
   },
   "exclude": ["node_modules", "babel.config.js"]

@@ -2,6 +2,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import styles from './styles';
+<<<<<<< HEAD
 import { AppLogo } from '../../assets';
 =======
 import { View, Text, Image, SafeAreaView, Button } from 'react-native';
@@ -21,10 +22,20 @@ const WelcomeScreen = () => {
     navigation.navigate(SCREEN_NAME.HOME_SCREEN);
   };
 
+=======
+import { AppLogo } from 'assets';
+import { useTranslation } from 'react-i18next';
+import { MText } from '../../components';
+
+const WelcomeScreen = () => {
+  const { t } = useTranslation();
+>>>>>>> 45b7991f3c11a422b6f287b05dec917a258ee792
   return (
 <<<<<<< HEAD
     <View style={styles.container}>
       <AppLogo />
+      <Text>{t('COMMON.HELLO')}</Text>
+      <MText translate>{t('COMMON.HELLO')}</MText>
     </View>
 =======
     <SafeAreaView style={styles.container}>
