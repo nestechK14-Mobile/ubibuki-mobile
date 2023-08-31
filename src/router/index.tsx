@@ -14,7 +14,14 @@ const defaultConfig = {
 
 const MainRouter = () => {
   return (
+<<<<<<< HEAD
     <MainStack.Navigator screenOptions={{ ...defaultConfig }}>
+=======
+    <MainStack.Navigator
+      screenOptions={{
+        headerShown: false
+      }}>
+>>>>>>> nam_nguyen/bai_tap_01/code_ui_basic_home_screen
       <MainStack.Screen name={SCREEN_NAME.WELCOME_SCREEN} component={WelcomeScreen} />
       <MainStack.Screen name={SCREEN_NAME.HOME_SCREEN} component={HomeScreen} />
       <MainStack.Screen name={SCREEN_NAME.DETAIL_SCREEN} component={DetailScreen} />

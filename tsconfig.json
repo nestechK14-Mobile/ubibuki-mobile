@@ -9,16 +9,24 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "noEmit": true,
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "jsx": "react",
     "skipLibCheck": false,
     "paths": {
+<<<<<<< HEAD
       "screens": ["./src/screens/*"],
       "constants": ["./src/constants/*"],
       "router": ["./src/router/*"],
       "assets": ["./src/assets/*"],
       "components": ["./src/components/*"],
       "utils": ["./src/utils/*"]
+=======
+      "screens/*": ["./src/screens/*"],
+      "constants/*": ["./src/constants/*"],
+      "router/*": ["./src/router/*"],
+      "assets/*": ["./src/assets/*"],
+      "components/*": ["./src/components/*"]
+>>>>>>> nam_nguyen/bai_tap_01/code_ui_basic_home_screen
     }
   },
   "exclude": ["node_modules", "babel.config.js"]
