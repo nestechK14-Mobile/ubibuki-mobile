@@ -2,27 +2,28 @@ import { StyleSheet, Text, View, Image, ImageSourcePropType } from 'react-native
 import React from 'react';
 import { Book_Tickets, IMG_BannerSample } from 'assets';
 
-interface BannerProps {
-  source: ImageSourcePropType;
+interface TitleProps {
+  source: String;
 }
 
-const Banner = ({ source }: BannerProps) => {
+const Content = ({ source }: TitleProps) => {
   return (
     <View style={styles.container}>
-      <Image source={source} />
-      
+      <Text style={styles.text}>{source}</Text>
     </View>
-    
   );
 };
 
-
-export default Banner;
+export default Content;
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
-    marginVertical: 16
-  
+    marginHorizontal: 25
+  },
+  text: {
+    fontSize: 16,
+    fontWeight: '400',
+    color: '#000000B2',
+    textAlign: 'justify'
   }
 });

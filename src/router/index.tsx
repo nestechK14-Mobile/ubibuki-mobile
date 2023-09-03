@@ -13,8 +13,8 @@ const MainRouter = () => {
       screenOptions={{
         headerShown: false
       }}>
-      <MainStack.Screen name={SCREEN_NAME.WELCOME_SCREEN} component={WelcomeScreen} />
-      <MainStack.Screen name={SCREEN_NAME.HOME_SCREEN} component={HomeScreen} />
+      {/* <MainStack.Screen name={SCREEN_NAME.WELCOME_SCREEN} component={WelcomeScreen} /> */}
+      {/* <MainStack.Screen name={SCREEN_NAME.HOME_SCREEN} component={HomeScreen} /> */}
       <MainStack.Screen name={SCREEN_NAME.DETAIL_SCREEN} component={DetailScreen} />
     </MainStack.Navigator>
   );
