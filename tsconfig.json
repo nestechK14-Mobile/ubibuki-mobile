@@ -13,11 +13,11 @@
     "jsx": "react",
     "skipLibCheck": false,
     "paths": {
-      "screens": ["./src/screens/*"],
-      "constants": ["./src/constants/*"],
-      "router": ["./src/router/*"],
-      "assets": ["./src/assets/*"],
-      "components": ["./src/components/*"]
+      "screens/*": ["./src/screens/*"],
+      "constants/*": ["./src/constants/*"],
+      "router/*": ["./src/router/*"],
+      "assets/*": ["./src/assets/*"],
+      "components/*": ["./src/components/*"]
     }
   },
   "exclude": ["node_modules", "babel.config.js"]

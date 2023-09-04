@@ -1,9 +1,10 @@
-import { View, Text } from 'react-native';
 import React from 'react';
 
-import { HomeScreen, DetailScreen, WelcomeScreen } from 'screens';
-import { SCREEN_NAME } from 'constants';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SCREEN_NAME } from '../constants/screenNames';
+import WelcomeScreen from '../screens/welcome/index';
+import HomeScreen from '../screens/home/index';
+import DetailScreen from '../screens/detail/index';
 
 const MainStack = createNativeStackNavigator();
 
