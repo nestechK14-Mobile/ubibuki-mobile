@@ -17,18 +17,23 @@ import {
   Play,
   Star_1
 } from 'assets';
+import { useNavigation } from '@react-navigation/native';
 
 interface SourseImage {
   source: ImageSourcePropType;
 }
 
 const InformationMovies = ({ source }: SourseImage) => {
+  const navigation = useNavigation();
+  const goBack = () => {
+    navigation.goBack();
+  }
   return (
     <View style={styles.container}>
       <ImageBackground source={source} style={styles.image}>
         <View>
           <View style={styles.containerBack}>
-            <TouchableOpacity style={styles.buttonSearch} activeOpacity={0.2}>
+            <TouchableOpacity onPress={goBack} style={styles.buttonSearch} activeOpacity={0.2}>
               <Image source={Back} />
             </TouchableOpacity>
           </View>

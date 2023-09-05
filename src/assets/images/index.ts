@@ -15,5 +15,7 @@ export { default as Cast1} from './cast1.png';
 export { default as Cast2} from './cast2.png';
 export { default as Cast3} from './cast3.png';
 export { default as Rating1} from './Rating.png';
+export { default as logo} from './logo.png';
+export { default as bottomtitle} from './bottomtitle.png';
 
 

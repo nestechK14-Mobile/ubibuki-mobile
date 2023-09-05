@@ -6,22 +6,18 @@ import {
   Book_Tickets_IMG2,
   Book_Tickets_IMG3,
   Book_Tickets_IMG4,
-  Ellipse_1,
-  Ellipse_2,
-  IC_Search,
-  IMG_BannerSample,
-  IMG_LogoTitle,
   Star_1
 } from 'assets';
-// import { useNavigation } from '@react-navigation/native';
-// import { SCREEN_NAME } from 'constants';
-
-
+import { useNavigation } from '@react-navigation/native';
+import { SCREEN_NAME } from '../../../constants/screenNames';
 
 interface DataItem {
   [x: string]: any;
   id: string;
   source: any;
+  title1: string;
+  num: string;
+  view: string;
 }
 
 const data: DataItem[] = [
@@ -32,9 +28,13 @@ const data: DataItem[] = [
 ];
 
 const GridList = () => {
+  const navigation = useNavigation();
+  const navigateToDetail = () => {
+    navigation.navigate(SCREEN_NAME.DETAIL_SCREEN);
+  };
   const renderItem = ({ item }: { item: DataItem }) => (
     <View style={styles.item}>
-      <TouchableOpacity style={styles.buttonSearch} activeOpacity={0.2}>
+      <TouchableOpacity onPress={navigateToDetail} style={styles.buttonSearch} activeOpacity={0.2}>
         <Image source={item.source} style={styles.image} />
       </TouchableOpacity>
       <View style={styles.infoContainer}>
@@ -80,7 +80,6 @@ const styles = StyleSheet.create({
   },
 
   infoContainer: {
-    // Kiểu cho view bao quanh các phần tử bên trong
     backgroundColor: 'rgba(0, 0, 0, 0.07)', // Màu nền xám
     borderRadius: 15,
     padding: 2,

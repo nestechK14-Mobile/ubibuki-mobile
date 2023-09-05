@@ -1,19 +1,31 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
-import { Book_Tickets, Ellipse_1, Ellipse_2, IMG_BannerSample, IMG_LogoTitle, Line } from 'assets';
+import { Line } from 'assets';
+import { useNavigation } from '@react-navigation/native';
+import { SCREEN_NAME } from '../../../constants';
+
+
+
 
 const SlideList = () => {
+  const navigation = useNavigation();
+  const navigateToShowlisting = () => {
+    navigation.navigate(SCREEN_NAME.SHOWLISTING);
+  };
+  const navigateToAboutMovie = () => {
+    navigation.navigate(SCREEN_NAME.ABOUTMOVIES);
+  }
   return (
     <View style={styles.container}>
       <View style={styles.container1}>
-        <TouchableOpacity style={styles.buttonSearch} activeOpacity={0.2}>
+        <TouchableOpacity style={styles.buttonSearch} activeOpacity={0.2} onPress={navigateToShowlisting} >
           <Text style={styles.text}>Showlisting</Text>
         </TouchableOpacity>
         <View style={styles.spacing1} />
         <Image  style={styles.image} source={Line} />
       </View>
       <View style={styles.spacing} />
-      <TouchableOpacity style={styles.buttonSearch} activeOpacity={0.2}>
+      <TouchableOpacity style={styles.buttonSearch} activeOpacity={0.2}  onPress={navigateToAboutMovie}>
         <Text style={styles.text}>About Movie</Text>
       </TouchableOpacity>
     </View>
@@ -27,8 +39,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     padding: 12,
     marginLeft: 17
-    // justifyContent: 'center', // Center horizontally
-    // alignItems: 'center',     // Center vertically
   },
   container1: {
     flexDirection: 'column'

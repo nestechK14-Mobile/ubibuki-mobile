@@ -9,6 +9,7 @@ import ShowlistingContent from './MoviesDetail/Showlistting/Showlisting';
 import AboutMovies from './MoviesDetail/AboutMovies/AboutMovies';
 
 
+
 const DetailScreen = () => {
   return (
     <SafeAreaView style = {styles.container}>
@@ -16,7 +17,7 @@ const DetailScreen = () => {
         <SlideList/>
         <ScrollView>
           <ShowlistingContent/>
-          <AboutMovies/>
+          <AboutMovies/> 
         </ScrollView>
     </SafeAreaView>
   );
