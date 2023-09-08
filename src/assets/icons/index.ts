@@ -8,6 +8,7 @@ export { default as Play } from './Play.png';
 export { default as Back } from './Back.png';
 export { default as InforAlarm } from './InforAlarm.png';
 export { default as google} from './google.png';
+export { default as BackDark } from './BackDark.png';
  
  
  

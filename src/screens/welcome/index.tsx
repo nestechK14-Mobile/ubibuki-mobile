@@ -5,10 +5,11 @@ import styles from './styles';
 import Banner from './sections/Banner';
 import { useNavigation } from '@react-navigation/native';
 import Banner1 from './sections/Headtitle';
-import Slide from './sections/Slide';
 import GridList from './sections/ListItems';
 import { Book_Tickets, IMG_BannerSample, Upcoming_Movies, Upcoming_Movies_IMG } from 'assets';
 import { BottomTabBar } from 'components';
+import Slider from './sections/Slide';
+import Slider1 from './sections/Slide1';
 
 const WelcomeScreen = () => {
   const navigation = useNavigation();
@@ -16,13 +17,11 @@ const WelcomeScreen = () => {
     <SafeAreaView style={styles.container}>
       <Header />
       <ScrollView>
-        <Banner source={IMG_BannerSample} />
-        <Slide />
+        <Slider />
         <Banner1 source={Book_Tickets} />
         <GridList />
         <Banner1 source={Upcoming_Movies} />
-        <Banner source={Upcoming_Movies_IMG} />
-        <Slide />
+        <Slider />
       </ScrollView>
       <BottomTabBar />
     </SafeAreaView>

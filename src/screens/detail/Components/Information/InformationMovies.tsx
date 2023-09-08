@@ -10,10 +10,6 @@ import {
 import React from 'react';
 import {
   Back,
-  Book_Tickets,
-  Book_Tickets_IMG2,
-  IMG_BannerSample,
-  Maaveeran,
   Play,
   Star_1
 } from 'assets';

@@ -3,20 +3,24 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Line, bottomtitle, google, logo } from 'assets';
 import { useNavigation } from '@react-navigation/native';
-import { SCREEN_NAME } from '../../constants';
+import { SCREEN_NAME } from '../../constants/screenNames';
 
 const LogInScreen = () => {
   const navigation = useNavigation();
+  
 
   const navigateToHome = () => {
     navigation.navigate(SCREEN_NAME.WELCOME_SCREEN);
+  };
+  const navigateToNumberLogin = () => {
+    navigation.navigate(SCREEN_NAME.NUMBER_LOGIN);
   };
   const [number, onChangeNumber] = React.useState('');
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container1}>
-        <TouchableOpacity onPress={navigateToHome}>
+        <TouchableOpacity onPress={navigateToHome}  >
           <Text style={styles.text}>SKIP</Text>
         </TouchableOpacity>
       </View>
@@ -61,7 +65,7 @@ const LogInScreen = () => {
       </View>
       <View style={styles.spacing}></View>
       <View style={styles.container4}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={navigateToNumberLogin}>
           <View style={styles.inforContainer1}>
             <View style={styles.container5}>
               <TextInput
@@ -112,6 +116,10 @@ const styles = StyleSheet.create({
   },
   container4: {
     alignItems: 'center'
+  },
+  buttonSearch: {
+    height: 56,
+    width: 60,
   },
   container7: {
     alignItems: 'center',

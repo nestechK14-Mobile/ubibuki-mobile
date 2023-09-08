@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, Image, ImageSourcePropType } from 'react-native';
 import React from 'react';
-import { Book_Tickets, IMG_BannerSample } from 'assets';
 
 interface TitleProps {
   source: String;

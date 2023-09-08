@@ -15,8 +15,6 @@ const Screen2 = () => (
     <Text>Screen 2</Text>
   </View>
 );
-
-// Create a bottom tab navigator
 const Tab = createBottomTabNavigator();
 
 const Navigation = () => {

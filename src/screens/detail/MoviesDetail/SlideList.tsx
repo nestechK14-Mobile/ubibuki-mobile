@@ -2,18 +2,17 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { Line } from 'assets';
 import { useNavigation } from '@react-navigation/native';
-import { SCREEN_NAME } from '../../../constants';
-
+import { SCREEN_NAME } from '../../../constants'
 
 
 
 const SlideList = () => {
   const navigation = useNavigation();
   const navigateToShowlisting = () => {
-    navigation.navigate(SCREEN_NAME.SHOWLISTING);
+    navigation.navigate(SCREEN_NAME.DETAIL_SCREEN1);
   };
   const navigateToAboutMovie = () => {
-    navigation.navigate(SCREEN_NAME.ABOUTMOVIES);
+    navigation.navigate(SCREEN_NAME.DETAIL_SCREEN2);
   }
   return (
     <View style={styles.container}>
@@ -25,7 +24,7 @@ const SlideList = () => {
         <Image  style={styles.image} source={Line} />
       </View>
       <View style={styles.spacing} />
-      <TouchableOpacity style={styles.buttonSearch} activeOpacity={0.2}  onPress={navigateToAboutMovie}>
+      <TouchableOpacity style={styles.buttonSearch} activeOpacity={0.2} onPress={navigateToAboutMovie} >
         <Text style={styles.text}>About Movie</Text>
       </TouchableOpacity>
     </View>

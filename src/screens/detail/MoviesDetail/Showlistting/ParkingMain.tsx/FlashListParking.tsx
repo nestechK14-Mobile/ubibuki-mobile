@@ -1,23 +1,12 @@
 import React, { useRef } from 'react';
 import { StyleSheet, View, FlatList, Image, Text, TouchableOpacity, ScrollView } from 'react-native';
-import {
-  Book_Tickets,
-  Book_Tickets_IMG1,
-  Book_Tickets_IMG2,
-  Book_Tickets_IMG3,
-  Book_Tickets_IMG4,
-  Ellipse_1,
-  Ellipse_2,
-  IC_Search,
-  IMG_BannerSample,
-  IMG_LogoTitle,
-  Star_1
-} from 'assets';
+
 
 interface DataItem {
   [x: string]: any;
   id: string;
   day1: string;
+  day2: string;
 }
 
 const data: DataItem[] = [

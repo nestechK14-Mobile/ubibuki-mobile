@@ -1,1 +1,2 @@
-export { default as ShowlistingContent } from './Showlisting';
+
+export {default as ShowlistingContent} from './Showlisting';

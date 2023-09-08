@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, FlatList, Image, Text, TouchableOpacity } from 'react-native';
 import {
-  Book_Tickets,
   Book_Tickets_IMG1,
   Book_Tickets_IMG2,
   Book_Tickets_IMG3,
@@ -30,7 +29,7 @@ const data: DataItem[] = [
 const GridList = () => {
   const navigation = useNavigation();
   const navigateToDetail = () => {
-    navigation.navigate(SCREEN_NAME.DETAIL_SCREEN);
+    navigation.navigate(SCREEN_NAME.DETAIL_SCREEN1);
   };
   const renderItem = ({ item }: { item: DataItem }) => (
     <View style={styles.item}>

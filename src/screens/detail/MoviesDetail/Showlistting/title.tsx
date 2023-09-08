@@ -15,7 +15,6 @@ const Title = ({ source }: TitleProps) => {
   );
 };
 
-
 export default Title;
 
 const styles = StyleSheet.create({
