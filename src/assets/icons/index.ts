@@ -1,0 +1,12 @@
+export { default as IC_Back } from './ic_back.svg';
+export { default as IC_Next } from './ic_next.svg';
+export { default as IC_MovieActive } from './ic_movie_active.svg';
+export { default as IC_MovieInActive } from './ic_movie_inactive.svg';
+export { default as IC_TheatersActive } from './ic_theaters_active.svg';
+export { default as IC_TheatersInActive } from './ic_theaters_inactive.svg';
+export { default as IC_BookingActive } from './ic_booking_active.svg';
+export { default as IC_BookingInActive } from './ic_booking_inactive.svg';
+export { default as IC_ProfileActive } from './ic_profile_active.svg';
+export { default as IC_ProfileInActive } from './ic_profile_inactive.svg';
+export { default as IC_Search } from './ic_search.svg';
+export { default as IC_Star } from './ic_star.svg';

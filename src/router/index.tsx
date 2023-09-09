@@ -1,11 +1,11 @@
-import { View, Text } from 'react-native';
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 
-import { HomeScreen, DetailScreen, WelcomeScreen } from 'screens';
-import { SCREEN_NAME, MainStackParams } from 'constants';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SCREEN_NAMES } from '@constants/screenNames';
+import AuthRouter from './authNavigator';
+import TabRouter from './tabNavigator';
 
-const MainStack = createNativeStackNavigator<MainStackParams>();
+const MainStack = createNativeStackNavigator();
 
 const defaultConfig = {
   headerShown: false,
@@ -14,10 +14,11 @@ const defaultConfig = {
 
 const MainRouter = () => {
   return (
-    <MainStack.Navigator screenOptions={{ ...defaultConfig }}>
-      <MainStack.Screen name={SCREEN_NAME.WELCOME_SCREEN} component={WelcomeScreen} />
-      <MainStack.Screen name={SCREEN_NAME.HOME_SCREEN} component={HomeScreen} />
-      <MainStack.Screen name={SCREEN_NAME.DETAIL_SCREEN} component={DetailScreen} />
+    <MainStack.Navigator
+      screenOptions={{ ...defaultConfig }}
+      initialRouteName={SCREEN_NAMES.AUTH_STACK}>
+      <MainStack.Screen name={SCREEN_NAMES.AUTH_STACK} component={AuthRouter} />
+      <MainStack.Screen name={SCREEN_NAMES.TAB_STACK} component={TabRouter} />
     </MainStack.Navigator>
   );
 };

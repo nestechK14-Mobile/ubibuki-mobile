@@ -18,24 +18,17 @@
   },
   "plugins": ["react", "react-native"],
   "rules": {
-    "react/prop-types": 0,
+    "react/prop-types": "on",
     "import/prefer-default-export": "off",
-    "react/jsx-filename-extension": [
-      1,
-      {"extensions": [".js", ".jsx", ".ts", ".tsx"]}
-    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "react/prefer-stateless-function": [0],
     "react/jsx-indent": [0],
     "react/jsx-key": [0],
     "react/sort-comp": [0],
     "react/destructuring-assignment": [0],
     "react/forbid-prop-types": [0],
-    "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}],
-    "quotes": [
-      "error",
-      "single",
-      {"avoidEscape": true, "allowTemplateLiterals": false}
-    ],
+    "react/no-unescaped-entities": ["error", { "forbid": [">", "}"] }],
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": false }],
     "jsx-quotes": ["error", "prefer-double"],
     "no-use-before-define": "off",
     "semi": ["error", "always"],
@@ -43,6 +36,6 @@
     "comma-dangle": ["error", "never"],
     "no-unused-vars": "warn",
     "react-native/no-inline-styles": 0,
-    "react/display-name": "off"
+    "react/display-name": "on"
   }
 }
