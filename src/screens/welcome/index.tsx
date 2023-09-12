@@ -40,7 +40,6 @@ const WelcomeScreen = () => {
                 value={phoneNumber}
                 onChangeText={Text => setPhoneNumber(Text)}
               />
-              <TouchableOpacity style={styles.iconInside}></TouchableOpacity>
             </View>
           </View>
         </View>
