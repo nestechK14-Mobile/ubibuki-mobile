@@ -1,22 +1,29 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image, TextInput, ScrollView } from 'react-native';
 import styles from './styles';
+import { useNavigation } from '@react-navigation/native';
+import { SCREEN_NAME } from 'constants/screenNames';
 
 const WelcomeScreen = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
+  const navigation = useNavigation();
+
+  const pressSkip = () => {
+    navigation.navigate(SCREEN_NAME.LIST_TICKET);
+  };
 
   return (
     <View style={styles.container}>
       {/** Header*/}
       <View style={styles.headerContainer}>
         <View />
-        <TouchableOpacity>
+        <TouchableOpacity onPress={pressSkip}>
           <Text style={styles.titleRightHeader}>SKIP</Text>
         </TouchableOpacity>
       </View>
       <ScrollView
-        style={{ flexGrow: 0 }}
-        contentContainerStyle={{ paddingVertical: 32 }}
+        style={{ flex: 1 }}
+        contentContainerStyle={{ paddingVertical: 32, flexGrow: 0 }}
         bounces={false}
         showsVerticalScrollIndicator={false}>
         {/** Image App Logo*/}
