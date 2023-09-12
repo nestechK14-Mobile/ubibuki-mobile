@@ -38,7 +38,7 @@ const WelcomeScreen = () => {
                 placeholder="+84"
                 placeholderTextColor={'#00000050'}
                 value={phoneNumber}
-                onChangeText={Text => setPhoneNumber(Text)}
+                onChangeText={text => setPhoneNumber(text)}
               />
             </View>
           </View>

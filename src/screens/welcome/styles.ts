@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
       color:'black',
       fontSize:15,
       fontWeight:'500',
+      width:'100%'
      },
      wrapperInputPhoneNumber:{
       backgroundColor:'#00000007',
@@ -96,7 +97,6 @@ const styles = StyleSheet.create({
      
      },
      placeHoder:{
-      
       flexDirection:'row',
       justifyContent:'space-between',
       alignItems:'center'
