@@ -67,7 +67,11 @@ const styles = StyleSheet.create({
     // marginVertical: 54
   },
   image: {
-    flex: 1
+    flex: 1,
+  },
+  imageOpacity: {
+    color: 'black',
+    opacity: 0.2
   },
   image2: {
     height: 20,

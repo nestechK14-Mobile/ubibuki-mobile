@@ -10,5 +10,7 @@ export const SCREEN_NAME = {
   SHOWLISTING: 'ShowlistingContent',
   ABOUTMOVIES: 'AboutMovies',
   NUMBER_LOGIN: 'NumberLogin',
-  VERYFY_NUMBER: 'VerifyNumber'
+  VERYFY_NUMBER: 'VerifyNumber',
+  CHOOSE_ACCOUNT: 'ChooseAccount',
+  ORDER_SCREEN: 'OrderScreen'
 };

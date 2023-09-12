@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { StyleSheet, View, FlatList, Image, Text, TouchableOpacity, ScrollView } from 'react-native';
+import { StyleSheet, View, FlatList, Text, TouchableOpacity} from 'react-native';
 
 
 interface DataItem {
@@ -51,9 +51,9 @@ const Flashlist = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row', // Display items in rows
-    flexWrap: 'wrap',     // Allow items to wrap to the next row
-    justifyContent: 'space-between', // Evenly space items in each row
+    flexDirection: 'row', 
+    flexWrap: 'wrap',     
+    justifyContent: 'space-between', 
   },
   container1: {
     
@@ -72,9 +72,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(0, 0, 0, 0.3)',
     padding: 8,
-    display: 'flex',        // Add this to enable Flexbox
-    justifyContent: 'center', // Vertically center its children
-    alignItems: 'center',     // Horizontally cent
+    display: 'flex',        
+    justifyContent: 'center', 
+    alignItems: 'center',     
     marginHorizontal: 5
   },
   item: {

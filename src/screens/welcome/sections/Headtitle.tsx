@@ -1,7 +1,5 @@
 import { StyleSheet, Text, View, Image, ImageSourcePropType } from 'react-native';
 import React from 'react';
-import { Book_Tickets, IMG_BannerSample, IMG_LogoTitle } from 'assets';
-
 interface SourceProps {
   source: ImageSourcePropType;
 }

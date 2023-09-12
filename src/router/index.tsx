@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import { HomeScreen, DetailScreen, WelcomeScreen, LogInScreen, DetailScreen2, NumberLogin, VerifyNumber } from 'screens';
+import { HomeScreen, DetailScreen, WelcomeScreen, LogInScreen, DetailScreen2, NumberLogin, VerifyNumber, ChooseAccount, OrderScreen } from 'screens';
 import { SCREEN_NAME } from '.././constants';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -22,6 +22,8 @@ const MainRouter = () => {
       <MainStack.Screen name={SCREEN_NAME.DETAIL_SCREEN2} component={DetailScreen2} />
       <MainStack.Screen name={SCREEN_NAME.NUMBER_LOGIN} component={NumberLogin} />
       <MainStack.Screen name={SCREEN_NAME.VERYFY_NUMBER} component={VerifyNumber} />
+      <MainStack.Screen name={SCREEN_NAME.CHOOSE_ACCOUNT} component={ChooseAccount} />
+      <MainStack.Screen name={SCREEN_NAME.ORDER_SCREEN} component={OrderScreen} />
 
     </MainStack.Navigator>
   );

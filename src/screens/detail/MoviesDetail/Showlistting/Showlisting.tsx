@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { StyleSheet} from 'react-native';
 import Title from './title';
-import Schedule from './Schedule';
+import Schedule from './schedule';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Parking from './ParkingMain.tsx/Parking';
 

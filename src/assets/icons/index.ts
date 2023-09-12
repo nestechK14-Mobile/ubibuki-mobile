@@ -9,6 +9,7 @@ export { default as Back } from './Back.png';
 export { default as InforAlarm } from './InforAlarm.png';
 export { default as google} from './google.png';
 export { default as BackDark } from './BackDark.png';
+export { default as Account } from './account.png';
  
  
  

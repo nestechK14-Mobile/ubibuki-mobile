@@ -4,7 +4,9 @@ import {
   View,
   Image,
   TouchableOpacity,
-  TextInput
+  TextInput,
+  KeyboardAvoidingView,
+  Platform
 } from 'react-native';
 import React from 'react';
 import { Back, BackDark, Play, Star_1 } from 'assets';
@@ -14,39 +16,41 @@ import { SCREEN_NAME } from '../../../constants/screenNames';
 const InformationMovies = () => {
   const navigation = useNavigation();
   const navigatetoVerify = () => {
-    navigation.navigate(SCREEN_NAME.VERYFY_NUMBER)
-  }
+    navigation.navigate(SCREEN_NAME.VERYFY_NUMBER);
+  };
   const goBack = () => {
     navigation.goBack();
   };
   const [number, onChangeNumber] = React.useState('');
   return (
     <View style={styles.container}>
-      <View style={styles.containerBack}>
-        <TouchableOpacity onPress={goBack} style={styles.buttonSearch} activeOpacity={0.2}>
+      <KeyboardAvoidingView keyboardVerticalOffset={16}>
+        <View style={styles.containerBack}>
+          <TouchableOpacity onPress={goBack} style={styles.buttonSearch} activeOpacity={0.2}>
             <Image source={BackDark} />
-        </TouchableOpacity>
-        <View style={styles.container1}>
-          <Text style={styles.text1}> Login With Mobile Number</Text>
-        </View>
-        <View style={styles.container2}>
-          <Text style={styles.text2}> Mobile Number</Text>
-        </View>
-        <View style={styles.container3}>
-          <View style={styles.container4}>
-            <TextInput
-              onChangeText={onChangeNumber}
-              value={number}
-              placeholder="+91"
-              keyboardType="numeric"></TextInput>
+          </TouchableOpacity>
+          <View style={styles.container1}>
+            <Text style={styles.text1}> Login With Mobile Number</Text>
           </View>
+          <View style={styles.container2}>
+            <Text style={styles.text2}> Mobile Number</Text>
+          </View>
+          <View style={styles.container3}>
+            <View style={styles.container4}>
+              <TextInput
+                onChangeText={onChangeNumber}
+                value={number}
+                placeholder="+91"
+                keyboardType="numeric"></TextInput>
+            </View>
+          </View>
+          <TouchableOpacity onPress={navigatetoVerify}>
+            <View style={styles.container5}>
+              <Text style={styles.text3}>VERIFY</Text>
+            </View>
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity onPress={navigatetoVerify}>
-        <View style={styles.container5}>
-          <Text style={styles.text3}>VERIFY</Text>
-        </View>
-        </TouchableOpacity>
-      </View>
+      </KeyboardAvoidingView>
     </View>
   );
 };
@@ -111,6 +115,6 @@ const styles = StyleSheet.create({
 
   buttonSearch: {
     height: 56,
-    width: 60,
+    width: 60
   }
 });

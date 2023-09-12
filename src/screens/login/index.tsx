@@ -15,6 +15,9 @@ const LogInScreen = () => {
   const navigateToNumberLogin = () => {
     navigation.navigate(SCREEN_NAME.NUMBER_LOGIN);
   };
+  const navigateToChooseAccount = () => {
+    navigation.navigate(SCREEN_NAME.CHOOSE_ACCOUNT);
+  };
   const [number, onChangeNumber] = React.useState('');
 
   return (
@@ -30,7 +33,7 @@ const LogInScreen = () => {
       <View style={styles.spacing}></View>
       <View style={styles.container4}>
         <View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={navigateToChooseAccount}>
             <View style={styles.inforContainer}>
               <View style={styles.container3}>
                 <Image source={google} />

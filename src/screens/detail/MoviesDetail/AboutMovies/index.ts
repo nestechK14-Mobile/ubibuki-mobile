@@ -1,2 +1,2 @@
 
-export { default as AboutMovies}from './AboutMovies';
+export { default as AboutMovies}from './aboutMovies';
