@@ -1,18 +1,21 @@
-import { View, Text } from 'react-native';
 import React from 'react';
 
-import { HomeScreen, DetailScreen, WelcomeScreen } from 'screens';
-import { SCREEN_NAME } from 'constants';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SCREEN_NAME } from '../constants/screenNames';
+import WelcomeScreen from '../screens/welcome/index';
+import HomeScreen from '../screens/home/index';
+import DetailScreen from '../screens/detail/index';
+import ListTicketScreen from 'screens/listTicket/listTicket';
 
 const MainStack = createNativeStackNavigator();
 
 const MainRouter = () => {
   return (
-    <MainStack.Navigator>
+    <MainStack.Navigator screenOptions={{ headerShown: false }}>
       <MainStack.Screen name={SCREEN_NAME.WELCOME_SCREEN} component={WelcomeScreen} />
       <MainStack.Screen name={SCREEN_NAME.HOME_SCREEN} component={HomeScreen} />
       <MainStack.Screen name={SCREEN_NAME.DETAIL_SCREEN} component={DetailScreen} />
+      <MainStack.Screen name={SCREEN_NAME.LIST_TICKET} component={ListTicketScreen} />
     </MainStack.Navigator>
   );
 };
