@@ -1,3 +1,6 @@
-export { default as WelcomeScreen } from './welcome';
-export { default as HomeScreen } from './home';
-export { default as DetailScreen } from './detail';
+import WelcomeScreen from './welcome';
+import HomeScreen from './home';
+import DetailScreen from './detail';
+import MoviesScreen from './movies';
+
+export { WelcomeScreen, HomeScreen, DetailScreen, MoviesScreen };

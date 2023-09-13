@@ -9,4 +9,5 @@ export type MainStackParams = {
   Home?: undefined;
   Detail?: undefined;
 };
+
 export type StackNavigationMain = NavigationProp<MainStackParams, any>;

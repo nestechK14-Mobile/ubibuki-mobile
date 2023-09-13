@@ -4,6 +4,8 @@ import MainRouter from './router';
 import { LogBox, Text, TextInput } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import { RootSiblingParent } from 'react-native-root-siblings';
+import 'react-native-gesture-handler';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 interface TextWithDefaultProps extends Text {
   defaultProps?: { allowFontScaling?: boolean };
@@ -43,9 +45,11 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <RootSiblingParent>
-        <MainRouter />
-      </RootSiblingParent>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <RootSiblingParent>
+          <MainRouter />
+        </RootSiblingParent>
+      </GestureHandlerRootView>
     </NavigationContainer>
   );
 };
