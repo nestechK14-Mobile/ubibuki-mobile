@@ -5,8 +5,8 @@ import { SCREEN_NAME } from '../constants/screenNames';
 import WelcomeScreen from '../screens/welcome/index';
 import HomeScreen from '../screens/home/index';
 import DetailScreen from '../screens/detail/index';
-import ListTicketScreen from 'screens/listTicket/listTicket';
-import AfterLogin from 'screens/login';
+import ListTicketScreen from '../screens/listTicket/listTicket';
+import AfterLogin from '../screens/login';
 
 const MainStack = createNativeStackNavigator();
 
