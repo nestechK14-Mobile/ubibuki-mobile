@@ -1,4 +1,4 @@
-import {View, Text} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 
 const DetailScreen = () => {
@@ -8,5 +8,7 @@ const DetailScreen = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({});
 
 export default DetailScreen;
