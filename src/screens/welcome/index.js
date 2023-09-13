@@ -9,7 +9,7 @@ const WelcomeScreen = () => {
   const navigation = useNavigation();
 
   const pressSkip = () => {
-    navigation.navigate(SCREEN_NAME.LIST_TICKET);
+    navigation.navigate(SCREEN_NAME.AFTER_LOGIN);
   };
 
   return (
