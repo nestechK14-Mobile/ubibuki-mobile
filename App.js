@@ -26,6 +26,7 @@ const WelcomeScreen = () => {
     <View>
       <Text>WelcomeScreen</Text>
     </View>
+
   );
 };
 
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({});
 const App = () => {
   return (
     <NavigationContainer>
-      <MainStack.Navigator>
+      <MainStack.Navigator >
         <MainStack.Screen name={'WelcomeScreen'} component={WelcomeScreen} />
         <MainStack.Screen name={'HomeScreen'} component={HomeScreen} />
         <MainStack.Screen name={'DetailScreen'} component={DetailScreen} />
