@@ -1,6 +1,6 @@
-import { Ellipse, Line } from 'assets';
+import { Ellipse, Line, Line1 } from 'assets';
 import React from 'react';
-import { View, StyleSheet, Image, Text } from 'react-native';
+import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
 
 interface Data {
   name: String;
@@ -9,6 +9,7 @@ interface Data {
 const ListView = ({ name, email }: Data) => {
   return (
     <View>
+      <TouchableOpacity>
       <View style={styles.container}>
         <View style={styles.container1}>
           <View>
@@ -26,9 +27,11 @@ const ListView = ({ name, email }: Data) => {
         </View>
         <View style={styles.spacing1}></View>
         <View>
-          <Image source={Line} style={styles.image} />
+          <Image source={Line1} style={styles.image} />
         </View>
       </View>
+        
+      </TouchableOpacity>
     </View>
   );
 };

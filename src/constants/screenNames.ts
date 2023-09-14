@@ -1,6 +1,4 @@
-// type SCREEN_NAME = {
-//   WELCOME_SCREEN: string;
-// };
+
 export const SCREEN_NAME = {
   WELCOME_SCREEN: 'WelcomeScreen',
   HOME_SCREEN: 'HomeScreen',
@@ -12,5 +10,6 @@ export const SCREEN_NAME = {
   NUMBER_LOGIN: 'NumberLogin',
   VERYFY_NUMBER: 'VerifyNumber',
   CHOOSE_ACCOUNT: 'ChooseAccount',
-  ORDER_SCREEN: 'OrderScreen'
+  ORDER_SCREEN: 'OrderScreen',
+  SEARCH_SCREEN: 'SearchScreen'
 };

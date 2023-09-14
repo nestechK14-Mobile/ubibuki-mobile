@@ -10,6 +10,8 @@ export { default as InforAlarm } from './InforAlarm.png';
 export { default as google} from './google.png';
 export { default as BackDark } from './BackDark.png';
 export { default as Account } from './account.png';
+export { default as Location } from './location.png';
+export { default as IC_Search_Red } from './Search_red.png';
  
  
  

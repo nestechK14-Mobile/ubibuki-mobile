@@ -18,4 +18,5 @@ export { default as Rating1} from './Rating.png';
 export { default as logo} from './logo.png';
 export { default as bottomtitle} from './bottomtitle.png';
 export { default as Ellipse} from './Ellipse.png';
+export { default as Line1} from './Line1.png';
 
