@@ -1,11 +1,35 @@
 import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import WelcomeScreen from './screens/WelcomeScreen';
-import HomeScreen from './screens/HomeScreen';
-import DetailScreen from './screens/DetailScreen';
 
 const MainStack = createNativeStackNavigator();
+
+const DetailScreen = () => {
+  return (
+    <View>
+      <Text>DetailScreen</Text>
+    </View>
+  );
+};
+
+const HomeScreen = () => {
+  return (
+    <View>
+      <Text>HomeScreen</Text>
+    </View>
+  );
+};
+
+const WelcomeScreen = () => {
+  return (
+    <View>
+      <Text>WelcomeScreen</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({});
 
 const App = () => {
   return (
