@@ -45,6 +45,7 @@ const WelcomeScreen = () => {
           <Text style={styles.textSplit}>or</Text>
           <View style={styles.lineSplit} />
         </View>
+
         <View style={styles.containerPhoneNumber}>
           <Text style={styles.titlePhoneNumber}>Mobile Number</Text>
           <View style={styles.wrapperInputPhoneNumber}>
@@ -57,10 +58,13 @@ const WelcomeScreen = () => {
             />
           </View>
         </View>
+
         <View style={styles.bottomContainer}>
-          <View style={{ height: 180, justifyContent: 'flex-end' }}>
-            <Text>I agree to the Term & Conditions and Privacy Policy</Text>
-          </View>
+          <TouchableOpacity>
+            <View style={{ height: 180, justifyContent: 'flex-end' }}>
+              <Text>I agree to the Term & Conditions and Privacy Policy</Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </View>
