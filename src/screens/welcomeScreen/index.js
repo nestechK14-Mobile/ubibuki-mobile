@@ -1,13 +1,14 @@
 import React from 'react';
-import MView from '../../components/MView';
-
 import styles from './styles';
-import MText from '../../components/MText';
+import MImage from '@/components/MImage';
+import MView from '@/components/MView';
+import { IMAGE_TYPE } from '@/constants/common';
+import { IMG_AppLogo } from '@/assets/images';
 
 const WelcomeScreen = () => {
   return (
     <MView style={styles.container}>
-      <MText>123</MText>
+      <MImage type={IMAGE_TYPE.IMAGE} source={IMG_AppLogo} />
     </MView>
   );
 };

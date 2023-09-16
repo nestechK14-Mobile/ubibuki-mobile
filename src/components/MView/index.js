@@ -1,7 +1,7 @@
 import { View, SafeAreaView, ScrollView, KeyboardAvoidingView } from 'react-native';
-import React from 'react';
-import { VIEW_TYPE } from '../../constants/common';
+import React, { memo } from 'react';
 import MLoading from '../MLoading';
+import { VIEW_TYPE } from '@/constants/common';
 
 const MView = props => {
   const { type = VIEW_TYPE.VIEW, children, isLoading = false, ...rest } = props;
@@ -45,4 +45,4 @@ const MView = props => {
   return <>{renderContent(type)}</>;
 };
 
-export default MView;
+export default memo(MView);

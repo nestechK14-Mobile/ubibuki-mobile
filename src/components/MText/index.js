@@ -1,9 +1,14 @@
 import { Text } from 'react-native';
-import React from 'react';
+import React, { memo } from 'react';
+import styles from './styles';
 
 const MText = props => {
-  const { children, ...rest } = props;
-  return <Text {...rest}>{children}</Text>;
+  const { children, style, ...rest } = props;
+  return (
+    <Text {...rest} allowFontScaling={false} style={[style, styles.textDefault]}>
+      {children}
+    </Text>
+  );
 };
 
-export default MText;
+export default memo(MText);

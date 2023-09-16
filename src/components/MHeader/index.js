@@ -1,5 +1,5 @@
+import React, { memo } from 'react';
 import { View, Text } from 'react-native';
-import React from 'react';
 
 const MHeader = () => {
   return (
@@ -9,4 +9,4 @@ const MHeader = () => {
   );
 };
 
-export default MHeader;
+export default memo(MHeader);

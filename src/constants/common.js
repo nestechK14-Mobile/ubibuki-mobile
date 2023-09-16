@@ -22,6 +22,11 @@ export const VIEW_TYPE = {
   KEYBOARD_AVOIDING_VIEW: 'KeyboardAvoidingView'
 };
 
+export const IMAGE_TYPE = {
+  IMAGE: 'Image',
+  IMAGE_URL: 'ImageUrl'
+};
+
 export const COLORS = {
   RED_500: '#f73d5c',
   BLACK_500: '#00000050'
