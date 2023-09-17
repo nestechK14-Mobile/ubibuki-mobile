@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-const TypeMobileNumber = () => {
+const AccountSelect = () => {
   return (
     <View>
-      <Text>TypeMobileNumber</Text>
+      <Text>AccountSelect</Text>
     </View>
   );
 };
 
-export default TypeMobileNumber;
+export default AccountSelect;
