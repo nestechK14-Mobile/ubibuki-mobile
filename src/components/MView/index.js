@@ -4,13 +4,13 @@ import MLoading from '../MLoading';
 import { VIEW_TYPE } from '@/constants/common';
 
 const MView = props => {
-  const { type = VIEW_TYPE.VIEW, children, isLoading = false, ...rest } = props;
+  const { type = VIEW_TYPE.VIEW, children, isLoading = false, contentStyle = {}, ...rest } = props;
 
-  const renderContent = type => {
+  const renderContent = (type, styles) => {
     switch (type) {
       case VIEW_TYPE.SAFE_AREA_VIEW:
         return (
-          <SafeAreaView {...rest}>
+          <SafeAreaView style={styles} {...rest}>
             {isLoading ? <MLoading /> : null}
             {children}
           </SafeAreaView>
@@ -18,7 +18,7 @@ const MView = props => {
 
       case VIEW_TYPE.SCROLL_VIEW:
         return (
-          <ScrollView {...rest}>
+          <ScrollView style={styles} {...rest}>
             {isLoading && <MLoading />}
             {children}
           </ScrollView>
@@ -26,7 +26,7 @@ const MView = props => {
 
       case VIEW_TYPE.KEYBOARD_AVOIDING_VIEW:
         return (
-          <KeyboardAvoidingView {...rest}>
+          <KeyboardAvoidingView style={styles} {...rest}>
             {isLoading && <MLoading />}
             {children}
           </KeyboardAvoidingView>
@@ -34,7 +34,7 @@ const MView = props => {
 
       default:
         return (
-          <View {...rest}>
+          <View style={styles} {...rest}>
             {isLoading ? <MLoading /> : null}
             {children}
           </View>
@@ -42,7 +42,7 @@ const MView = props => {
     }
   };
 
-  return <>{renderContent(type)}</>;
+  return <>{renderContent(type, contentStyle)}</>;
 };
 
 export default memo(MView);

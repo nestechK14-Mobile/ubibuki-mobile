@@ -5,7 +5,7 @@ import styles from './styles';
 const MText = props => {
   const { children, style, ...rest } = props;
   return (
-    <Text {...rest} allowFontScaling={false} style={[style, styles.textDefault]}>
+    <Text {...rest} allowFontScaling={false} style={[styles.textDefault, style]}>
       {children}
     </Text>
   );

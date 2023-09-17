@@ -27,7 +27,16 @@ export const IMAGE_TYPE = {
   IMAGE_URL: 'ImageUrl'
 };
 
+export const BUTTON_TYPE = {
+  BUTTON: 'Button',
+  NOT_FEEDBACK: 'NotFeedBack',
+  BUTTON_HIGHLIGHT: 'ButtonHighLight'
+};
+
 export const COLORS = {
   RED_500: '#f73d5c',
-  BLACK_500: '#00000050'
+  BLACK_500: '#00000050',
+  BLACK: '#000000',
+  WHITE: '#FFFFFF',
+  TRANSPARENT: 'transparent'
 };

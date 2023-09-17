@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { SCREENS_NAME } from '../constants/common';
-import { useLayoutEffect } from 'react';
 import SplashScreen from 'react-native-splash-screen';
-import WelcomeScreen from '@/screens/welcomeScreen';
+import { WelcomeScreen } from '@/screens';
+import { SCREENS_NAME } from '@/constants';
 
 const MainStack = createNativeStackNavigator();
 
