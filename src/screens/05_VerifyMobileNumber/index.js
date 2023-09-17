@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-const DetailScreen = () => {
+const VerifyMobileNumber = () => {
   return (
     <View>
-      <Text>DetailScreen</Text>
+      <Text>VerifyMobileNumber</Text>
     </View>
   );
 };
 
-export default DetailScreen;
+export default VerifyMobileNumber;

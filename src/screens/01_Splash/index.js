@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-const MovieSelect = () => {
+const Splash = () => {
   return (
     <View>
-      <Text>MovieSelect</Text>
+      <Text>Splash</Text>
     </View>
   );
 };
 
-export default MovieSelect;
+export default Splash;

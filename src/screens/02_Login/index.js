@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-const MovieSelect = () => {
+const Login = () => {
   return (
     <View>
-      <Text>MovieSelect</Text>
+      <Text>Login</Text>
     </View>
   );
 };
 
-export default MovieSelect;
+export default Login;

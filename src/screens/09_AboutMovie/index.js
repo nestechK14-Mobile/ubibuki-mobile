@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-const DetailScreen = () => {
+const AboutMovie = () => {
   return (
     <View>
-      <Text>DetailScreen</Text>
+      <Text>AboutMovie</Text>
     </View>
   );
 };
 
-export default DetailScreen;
+export default AboutMovie;

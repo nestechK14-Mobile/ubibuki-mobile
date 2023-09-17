@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-const DetailScreen = () => {
+const TypeMobileNumber = () => {
   return (
     <View>
-      <Text>DetailScreen</Text>
+      <Text>TypeMobileNumber</Text>
     </View>
   );
 };
 
-export default DetailScreen;
+export default TypeMobileNumber;
