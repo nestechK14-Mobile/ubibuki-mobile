@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Image, TextInput, ScrollView } from 'react-native';
+import { View, Text, StatusBar, TouchableOpacity, Image, TextInput, ScrollView, Platform } from 'react-native';
 import styles from './styles';
 import { useNavigation } from '@react-navigation/native';
 import { SCREEN_NAME } from '../../constants/screenNames';
+import { red } from 'react-native-reanimated/lib/typescript/reanimated2/Colors';
 {/** Hàm PressSKIP trỏ vào phương thức navigate trong class useNavigation để chọn màn hình theo MainStack */}
 const Login = () => {
 
@@ -13,12 +14,12 @@ const Login = () => {
     navigation.navigate(SCREEN_NAME.ACCOUNT_SELECT);
    
   };
-  const pressBack = () => {
-    navigation.navigate(SCREEN_NAME.CINEMA_LOCATION);
-  };
+
   return (
+    
     <View style={styles.container}>
-      {/** Header*/}
+    <StatusBar  backgroundColor={'orange'} />
+         {/** Header*/}
       <View style={styles.headerContainer}>
   
 
@@ -35,7 +36,7 @@ const Login = () => {
 
       <ScrollView
       
-        //style={{ flexGrow: 0 }}
+        style={{ flexGrow: 1 }}
         contentContainerStyle={{ paddingVertical: 32 }}
         bounces={false}
         showsVerticalScrollIndicator={false}>

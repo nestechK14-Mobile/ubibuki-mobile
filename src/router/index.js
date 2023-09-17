@@ -20,7 +20,16 @@ const MainStack = createNativeStackNavigator();
 
 const MainRouter = () => {
   return (
-    <MainStack.Navigator screenOptions={{ headerShown: false }}>
+    <MainStack.Navigator screenOptions={{ 
+      headerStyle: {
+        backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    
+      headerShown: false }}>
       <MainStack.Screen name={SCREEN_NAME.LOGIN} component={Login} />
       <MainStack.Screen name={SCREEN_NAME.ACCOUNT_SELECT} component={AccountSelect} />
 
