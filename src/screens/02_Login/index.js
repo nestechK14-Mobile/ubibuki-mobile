@@ -18,7 +18,9 @@ const Login = () => {
   return (
     
     <View style={styles.container}>
-    <StatusBar  backgroundColor={'orange'} />
+    <StatusBar  
+    hidden = {true}
+    backgroundColor={'orange'} />
          {/** Header*/}
       <View style={styles.headerContainer}>
   

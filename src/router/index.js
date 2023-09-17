@@ -3,10 +3,11 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SCREEN_NAME } from '../constants/screenNames';
 
-import WelcomeScreen from '../screens/welcome/index';
+//import WelcomeScreen from '../screens/welcome/index';
 import HomeScreen from '../screens/home/index';
 import DetailScreen from '../screens/03_AccountSelect/index';
 
+import WelcomePage from '../screens/01_Splash'
 import Login from 'screens/02_Login';
 import AccountSelect from 'screens/03_AccountSelect';
 import TypeMobileNumber from 'screens/04_TypeMobileNumber';
@@ -15,6 +16,7 @@ import CinemaLocation from 'screens/06_CinemaLocation';
 import MovieSelect from 'screens/07_MovieSelect';
 import MovieTimeListing from 'screens/08_MovieTimeListing';
 import AboutMovie from 'screens/09_AboutMovie';
+
 
 const MainStack = createNativeStackNavigator();
 
@@ -30,6 +32,7 @@ const MainRouter = () => {
       },
     
       headerShown: false }}>
+      <MainStack.Screen name={SCREEN_NAME.SPLASH} component={WelcomePage} />
       <MainStack.Screen name={SCREEN_NAME.LOGIN} component={Login} />
       <MainStack.Screen name={SCREEN_NAME.ACCOUNT_SELECT} component={AccountSelect} />
 
