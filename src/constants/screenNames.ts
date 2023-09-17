@@ -10,6 +10,6 @@ export const SCREEN_NAME = {
   CINEMA_LOCATION:'CinemaLocation',
   MOVIE_SELECT:'MovieSelect',
   MOVIE_TIME_LISTING:'MovieTimeListing',
-  ABOUT_MOVIEL:'AboutMovie',
+  ABOUT_MOVIE:'AboutMovie',
 
 };

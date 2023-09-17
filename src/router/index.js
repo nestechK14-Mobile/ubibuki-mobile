@@ -21,16 +21,15 @@ const MainStack = createNativeStackNavigator();
 const MainRouter = () => {
   return (
     <MainStack.Navigator screenOptions={{ headerShown: false }}>
-    <MainStack.Screen name={SCREEN_NAME.LOGIN} component={Login} />
-    <MainStack.Screen name={SCREEN_NAME.ACCOUNT_SELECT} component={AccountSelect} />
+      <MainStack.Screen name={SCREEN_NAME.LOGIN} component={Login} />
+      <MainStack.Screen name={SCREEN_NAME.ACCOUNT_SELECT} component={AccountSelect} />
 
-    
-    <MainStack.Screen name={SCREEN_NAME.TYPE_MOBILE_NUMBER} component={TypeMobileNumber} />
-    <MainStack.Screen name={SCREEN_NAME.VERIFY_MOBILE_NUMBER} component={VerifyMobileNumber} />
-    <MainStack.Screen name={SCREEN_NAME.CINEMA_LOCATION} component={CinemaLocation} />
-    <MainStack.Screen name={SCREEN_NAME.MOVIE_SELECT} component={MovieSelect} />
-    <MainStack.Screen name={SCREEN_NAME.MOVIE_TIME_LISTING} component={MovieTimeListing} />
-    <MainStack.Screen name={SCREEN_NAME.ABOUT_MOVIEL} component={AboutMovie} />
+      <MainStack.Screen name={SCREEN_NAME.TYPE_MOBILE_NUMBER} component={TypeMobileNumber} />
+      <MainStack.Screen name={SCREEN_NAME.VERIFY_MOBILE_NUMBER} component={VerifyMobileNumber} />
+      <MainStack.Screen name={SCREEN_NAME.CINEMA_LOCATION} component={CinemaLocation} />
+      <MainStack.Screen name={SCREEN_NAME.MOVIE_SELECT} component={MovieSelect} />
+      <MainStack.Screen name={SCREEN_NAME.MOVIE_TIME_LISTING} component={MovieTimeListing} />
+      <MainStack.Screen name={SCREEN_NAME.ABOUT_MOVIE} component={AboutMovie} />
 
       <MainStack.Screen name={SCREEN_NAME.WELCOME_SCREEN} component={WelcomeScreen} />
       <MainStack.Screen name={SCREEN_NAME.HOME_SCREEN} component={HomeScreen} />

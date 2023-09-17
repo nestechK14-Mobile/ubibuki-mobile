@@ -1,12 +1,36 @@
-import { View, Text } from 'react-native';
+
+
 import React from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { SCREEN_NAME } from '../../constants/screenNames';
 
 const AboutMovie = () => {
+  const navigation = useNavigation();
+
+  const pressNEXT  = () => {
+    navigation.navigate(SCREEN_NAME.LOGIN);
+  };
+
   return (
     <View>
-      <Text>AboutMovie</Text>
+      <Text 
+      style = {{padding: 10, 
+        alignItems: 'center',
+         fontSize: 30} }>
+
+         AboutMovie         
+         </Text>
+
+      <TouchableOpacity
+      onPress={pressNEXT}
+
+      style={{ width: 100, height: 100, backgroundColor: 'pink' }}>
+      <Text style = {{padding: 10, alignItems: 'center', fontSize: 30} }>NEXT</Text>
+    </TouchableOpacity>
     </View>
   );
 };
 
 export default AboutMovie;
+
