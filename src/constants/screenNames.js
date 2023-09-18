@@ -1,7 +1,10 @@
 export const SCREEN_NAME = {
-  WELCOME_SCREEN: 'WelcomeScreen',
-  HOME_SCREEN: 'HomeScreen',
-  DETAIL_SCREEN: 'DetailScreen',
-  LIST_TICKET: 'ListTicketScreen',
-  AFTER_LOGIN: 'AfterLoginScreen'
+  LOGO_MVT: 'LogoMVT',
+  LOGIN: 'Login',
+  AFTER_LOGIN: 'AfterLogin',
+  INPUT_NUMBER: 'InputNumber',
+  OTP_NUMBER: 'OTPNumber',
+  CHOSE_CITY: 'ChoseCity',
+  MAIN_MENU: 'Mainmenu',
+  CHOOSE_OPTION: 'ChooseOption'
 };

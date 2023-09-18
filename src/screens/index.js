@@ -1,5 +1,8 @@
-export { default as WelcomeScreen } from './welcome';
-export { default as HomeScreen } from './home';
-export { default as DetailScreen } from './detail';
-export { default as listTicket } from '../screens/listTicket';
-export { default as AfterLogin } from './login/index';
+export { default as Login } from './02Login';
+export { default as LogoMVT } from './01LogoMVT';
+export { default as InputNumber } from './04InputNumber';
+export { default as AfterLogin } from './03AfterLogin/';
+export { default as OTPNumber } from './05OTPNumber';
+export { default as ChoseCity } from './06ChoseCity';
+export { default as Mainmenu } from './07Mainmenu';
+export { default as ChooseOption } from './08ChooseOption';

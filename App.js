@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import ListTicket from './src/screens/04InputNumber/listTicket';
+import AfterLogin from './src/screens/03AfterLogin';
 
 const MainStack = createNativeStackNavigator();
 
@@ -21,22 +23,14 @@ const HomeScreen = () => {
   );
 };
 
-const WelcomeScreen = () => {
-  return (
-    <View>
-      <Text>WelcomeScreen</Text>
-    </View>
-
-  );
-};
-
 const styles = StyleSheet.create({});
 
 const App = () => {
   return (
     <NavigationContainer>
-      <MainStack.Navigator >
-        <MainStack.Screen name={'WelcomeScreen'} component={WelcomeScreen} />
+      <MainStack.Navigator screenOptions={{ headerShown: false }}>
+        <MainStack.Screen name={'AfterLogin'} component={AfterLogin} />
+        <MainStack.Screen name={'ListTicket'} component={ListTicket} />
         <MainStack.Screen name={'HomeScreen'} component={HomeScreen} />
         <MainStack.Screen name={'DetailScreen'} component={DetailScreen} />
       </MainStack.Navigator>

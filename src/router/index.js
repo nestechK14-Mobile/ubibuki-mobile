@@ -2,22 +2,28 @@ import React from 'react';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SCREEN_NAME } from '../constants/screenNames';
-import WelcomeScreen from '../screens/welcome/index';
-import HomeScreen from '../screens/home/index';
-import DetailScreen from '../screens/detail/index';
-import ListTicketScreen from 'screens/listTicket/listTicket';
-import AfterLogin from 'screens/login';
+import LogoMVT from '../screens/01LogoMVT/index';
+import Login from '../screens/02Login/index';
+import AfterLogin from '../screens/03AfterLogin';
+import InputNumber from '../screens/04InputNumber';
+import OTPNumber from '../screens/05OTPNumber';
+import ChoseCity from '../screens/06ChoseCity';
+import Mainmenu from '../screens/07Mainmenu';
+import ChooseOption from '../screens/08ChooseOption';
 
 const MainStack = createNativeStackNavigator();
 
 const MainRouter = () => {
   return (
     <MainStack.Navigator screenOptions={{ headerShown: false }}>
-      <MainStack.Screen name={SCREEN_NAME.WELCOME_SCREEN} component={WelcomeScreen} />
-      <MainStack.Screen name={SCREEN_NAME.HOME_SCREEN} component={HomeScreen} />
-      <MainStack.Screen name={SCREEN_NAME.DETAIL_SCREEN} component={DetailScreen} />
-      <MainStack.Screen name={SCREEN_NAME.LIST_TICKET} component={ListTicketScreen} />
+      <MainStack.Screen name={SCREEN_NAME.LOGO_MTV} component={LogoMVT} />
+      <MainStack.Screen name={SCREEN_NAME.LOGIN} component={Login} />
       <MainStack.Screen name={SCREEN_NAME.AFTER_LOGIN} component={AfterLogin} />
+      <MainStack.Screen name={SCREEN_NAME.INPUT_NUMBER} component={InputNumber} />
+      <MainStack.Screen name={SCREEN_NAME.OTP_NUMBER} component={OTPNumber} />
+      <MainStack.Screen name={SCREEN_NAME.CHOSE_CITY} component={ChoseCity} />
+      <MainStack.Screen name={SCREEN_NAME.MAIN_MENU} component={Mainmenu} />
+      <MainStack.Screen name={SCREEN_NAME.CHOOSE_OPTION} component={ChooseOption} />
     </MainStack.Navigator>
   );
 };
