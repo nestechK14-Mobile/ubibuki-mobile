@@ -1,9 +1,11 @@
 
 
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity , Image} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { SCREEN_NAME } from '../../constants/screenNames';
+import styles from './styles';
+//import { Image } from 'react-native-reanimated/lib/typescript/Animated';
 
 const AccountSelect = () => {
   const navigation = useNavigation();
@@ -18,17 +20,24 @@ const AccountSelect = () => {
       style = {{padding: 10, 
         alignItems: 'center',
          fontSize: 30} }>
-
          AccountSelect 
-         
-         </Text>
+        </Text>
 
       <TouchableOpacity
       onPress={pressNEXT}
 
-      style={{ width: 100, height: 100, backgroundColor: 'yellow' }}>
+      style={{ width: 50, height: 50, backgroundColor: 'yellow' }}>
       <Text style = {{padding: 10, alignItems: 'center', fontSize: 30} }>NEXT</Text>
     </TouchableOpacity>
+
+ <View styles = {styles.container}>
+ <Image source={require('../../assets/MoviesTimesLogo.png')} />
+ </View>
+
+ 
+
+
+
     </View>
   );
 };

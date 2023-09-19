@@ -33,8 +33,11 @@ const MainRouter = () => {
       },
     
       headerShown: false }}>
-      <MainStack.Screen name={SCREEN_NAME.LOGIN} component={Login} />
+
+
       <MainStack.Screen name={SCREEN_NAME.ACCOUNT_SELECT} component={AccountSelect} />
+      <MainStack.Screen name={SCREEN_NAME.LOGIN} component={Login} />
+     
 
       <MainStack.Screen name={SCREEN_NAME.TYPE_MOBILE_NUMBER} component={TypeMobileNumber} />
       <MainStack.Screen name={SCREEN_NAME.VERIFY_MOBILE_NUMBER} component={VerifyMobileNumber} />
