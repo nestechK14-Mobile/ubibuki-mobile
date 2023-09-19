@@ -14,3 +14,12 @@ export const SCREEN_NAME = {
   TERM_AND_CONTDITION: 'TermAndCondition',
   PRIVATE_POLICY:'PrivatePolicy',
 };
+
+
+export const FONTS = {
+  BLACK : 'Inter-Bold',
+  EXTRA_BOLD : 'Inter-ExtraBold',
+  ITALIC : 'Inter-Italic',
+  LIGHT : 'Inter-Light',
+  MEDIUM : 'Inter-Medium'
+}
