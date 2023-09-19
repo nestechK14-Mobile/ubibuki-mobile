@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     borderRadius: 10
   },
   bottomContainer: {
-    alignItems: 'center'
+    alignItems: 'center',
   },
   touchSkip:{
 

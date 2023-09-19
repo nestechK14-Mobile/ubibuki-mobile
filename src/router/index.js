@@ -15,7 +15,10 @@ import CinemaLocation from 'screens/06_CinemaLocation';
 import MovieSelect from 'screens/07_MovieSelect';
 import MovieTimeListing from 'screens/08_MovieTimeListing';
 import AboutMovie from 'screens/09_AboutMovie';
+import TermAndCondition from 'screens/10_TermAndCondition';
 
+
+import PrivatePolicy from 'screens/11_PrivatePolicy';
 const MainStack = createNativeStackNavigator();
 
 const MainRouter = () => {
@@ -39,6 +42,9 @@ const MainRouter = () => {
       <MainStack.Screen name={SCREEN_NAME.MOVIE_SELECT} component={MovieSelect} />
       <MainStack.Screen name={SCREEN_NAME.MOVIE_TIME_LISTING} component={MovieTimeListing} />
       <MainStack.Screen name={SCREEN_NAME.ABOUT_MOVIE} component={AboutMovie} />
+      <MainStack.Screen name={SCREEN_NAME.TERM_AND_CONTDITION} component={TermAndCondition} />
+      <MainStack.Screen name={SCREEN_NAME.PRIVATE_POLICY} component={PrivatePolicy} />
+
 
       <MainStack.Screen name={SCREEN_NAME.WELCOME_SCREEN} component={WelcomeScreen} />
       <MainStack.Screen name={SCREEN_NAME.HOME_SCREEN} component={HomeScreen} />

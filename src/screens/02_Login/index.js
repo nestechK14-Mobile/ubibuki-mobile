@@ -3,7 +3,6 @@ import { View, Text, StatusBar, TouchableOpacity, Image, TextInput, ScrollView, 
 import styles from './styles';
 import { useNavigation } from '@react-navigation/native';
 import { SCREEN_NAME } from '../../constants/screenNames';
-import { red } from 'react-native-reanimated/lib/typescript/reanimated2/Colors';
 {/** Hàm PressSKIP trỏ vào phương thức navigate trong class useNavigation để chọn màn hình theo MainStack */}
 const Login = () => {
 
@@ -14,7 +13,16 @@ const Login = () => {
     navigation.navigate(SCREEN_NAME.ACCOUNT_SELECT);
    
   };
+  const ToTermPage = useNavigation();
+const PressTerm = () => {
+  ToTermPage.navigate(SCREEN_NAME.TERM_AND_CONTDITION)
 
+};
+const ToPolicy= useNavigation();
+const PressPolicy = () => {
+  ToPolicy.navigate(SCREEN_NAME.PRIVATE_POLICY)
+
+};
   return (
     
     <View style={styles.container}>
@@ -73,8 +81,18 @@ const Login = () => {
           </View>
         </View>
         <View style={styles.bottomContainer}>
-          <View style={{ height: 180, justifyContent: 'flex-end' }}>
-            <Text>I agree to the Term & Conditions and Privacy Policy</Text>
+          <View style={{     flexDirection: 'row',
+          height: 130, alignItems: 'flex-end' }}>
+            <Text>I agree to the</Text>
+            <TouchableOpacity onPress={PressTerm}>
+            <Text style= {{fontWeight: 'bold'}}>Term & Conditions</Text>
+            </TouchableOpacity>
+           
+            <Text> and </Text>
+
+            <TouchableOpacity onPress={PressPolicy}>
+            <Text style= {{fontWeight: 'bold'}}>Privacy Policy</Text>
+                        </TouchableOpacity>
           </View>
         </View>
       </ScrollView>

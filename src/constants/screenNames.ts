@@ -2,7 +2,7 @@ export const SCREEN_NAME = {
   WELCOME_SCREEN: 'WelcomeScreen',
   HOME_SCREEN: 'HomeScreen',
   DETAIL_SCREEN: 'DetailScreen',
-
+  SPLASH: 'Splash',
   LOGIN: 'Login',
   ACCOUNT_SELECT:'AccountSelect',
   TYPE_MOBILE_NUMBER:'TypeMobileNumber',
@@ -11,5 +11,6 @@ export const SCREEN_NAME = {
   MOVIE_SELECT:'MovieSelect',
   MOVIE_TIME_LISTING:'MovieTimeListing',
   ABOUT_MOVIE:'AboutMovie',
-
+  TERM_AND_CONTDITION: 'TermAndCondition',
+  PRIVATE_POLICY:'PrivatePolicy',
 };
