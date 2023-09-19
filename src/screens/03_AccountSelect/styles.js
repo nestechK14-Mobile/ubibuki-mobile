@@ -1,21 +1,36 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
+  mainContainer:
+  {
+width: '100%', 
+backgroundColor: 'blue',
+alignItems:'center'
+
+  },
+
+  container: {
+marginHorizontal:20,
+marginTop:120,
+
+  height: 570,
+  alignItems: 'center', 
+  borderRadius: 10,
+  borderWidth: 1,
+
     
-    container: {
+        },
+        
+  logoText: {
+    paddingTop: 20 ,
 
-      width: 380,
-      height: 570,
-      top: 170,
-      left: 25,
-      borderRadius: 10,
-      border: 1,
+      },
+   
+      TextChooseAccount:{
+        alignItems:'center',
+padding:20,
 
-        flex: 1,
-        backgroundColor: 'red',
-        position: 'relative'
-      }
-
+      },
 
 });
 

@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import { View, Text, TouchableOpacity , Image} from 'react-native';
+import { View, Text, TouchableOpacity , Image, ScrollView, SafeAreaView} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { SCREEN_NAME } from '../../constants/screenNames';
 import styles from './styles';
@@ -15,30 +15,43 @@ const AccountSelect = () => {
   };
 
   return (
-    <View>
-      <Text 
-      style = {{padding: 10, 
-        alignItems: 'center',
-         fontSize: 30} }>
-         AccountSelect 
-        </Text>
 
-      <TouchableOpacity
-      onPress={pressNEXT}
+   
+<SafeAreaView>
+<ScrollView>
 
-      style={{ width: 50, height: 50, backgroundColor: 'yellow' }}>
-      <Text style = {{padding: 10, alignItems: 'center', fontSize: 30} }>NEXT</Text>
-    </TouchableOpacity>
+<View  styles = {styles.mainContainer}>
 
- <View styles = {styles.container}>
- <Image source={require('../../assets/MoviesTimesLogo.png')} />
- </View>
+<View style = {styles.container}>
 
- 
+<View style = {styles.logoText}>
+<Image source={require('../../assets/MoviesTimesLogo.png')} />
+</View>
+
+<View style = {styles.TextChooseAccount}>
+<Text style= {{fontWeight: 'bold', fontSize: 15,}}>Choose an account </Text>
+<Text style= {{ fontSize: 15,}}> to continue to Movie Ticket booking</Text>
+
+</View>
 
 
+</View>
 
-    </View>
+
+
+</View>
+</ScrollView>
+</SafeAreaView>
+
+
+
+
+
+
+
+
+  
+
   );
 };
 
