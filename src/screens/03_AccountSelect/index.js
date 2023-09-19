@@ -23,16 +23,18 @@ const AccountSelect = () => {
 <View  styles = {styles.mainContainer}>
 
 <View style = {styles.container}>
-
+<TouchableOpacity onPress = {pressNEXT}>
 <View style = {styles.logoText}>
 <Image source={require('../../assets/MoviesTimesLogo.png')} />
 </View>
+</TouchableOpacity>
 
 <View style = {styles.TextChooseAccount}>
 <Text style= {{fontWeight: 'bold', fontSize: 15,}}>Choose an account </Text>
 <Text style= {{ fontSize: 15,}}> to continue to Movie Ticket booking</Text>
-
 </View>
+
+
 
 
 </View>
