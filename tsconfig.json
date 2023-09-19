@@ -10,8 +10,7 @@
     "moduleResolution": "node",
     "noEmit": true,
     "jsx": "react",
-    "skipLibCheck": false,
-   
+    "skipLibCheck": false
   },
   "exclude": ["node_modules", "babel.config.js"]
 }
