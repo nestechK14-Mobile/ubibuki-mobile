@@ -12,7 +12,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   GGLogin: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20
   },
   ViewGGLogin: {}
 });
