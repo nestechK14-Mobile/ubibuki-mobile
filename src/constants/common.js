@@ -1,6 +1,17 @@
 export const SCREENS_NAME = {
-  DUMMY_SCREEN: 'DummyScreen',
-  WELCOME_SCREEN: 'WelcomeScreen'
+  AUTH_STACK: 'AuthStack',
+  TAB_STACK: 'TabStack',
+  WELCOME_SCREEN: 'WelcomeScreen',
+  MOVIES_STACK: 'MoviesStack',
+  MOVIES_SCREEN: 'MoviesScreen',
+  MOVIE_DETAIL_SCREEN: 'MovieDetailScreen',
+  THEATERS_STACK: 'TheatersStack',
+  THEATERS_SCREEN: 'TheatersScreen',
+  BOOKINGS_STACK: 'BookingsStack',
+  BOOKINGS_SCREEN: 'BookingsScreen',
+  BOOKING_DETAIL_SCREEN: 'BookingDetailScreen',
+  PROFILE_STACK: 'ProfileStack',
+  PROFILE_SCREEN: 'ProfileScreen'
 };
 
 const DEFAULT_PREFIX_FONT_FAMILY = 'Inter-';

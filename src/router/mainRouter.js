@@ -1,8 +1,9 @@
-import React, { useLayoutEffect } from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import SplashScreen from 'react-native-splash-screen';
-import { WelcomeScreen } from '@/screens';
 import { SCREENS_NAME } from '@/constants';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React, { useLayoutEffect } from 'react';
+import SplashScreen from 'react-native-splash-screen';
+import MainTab from './mainTab';
+import AuthStack from './stack/authStack';
 
 const MainStack = createNativeStackNavigator();
 
@@ -17,7 +18,8 @@ const MainRouter = () => {
 
   return (
     <MainStack.Navigator screenOptions={defaultConfig}>
-      <MainStack.Screen name={SCREENS_NAME.WELCOME_SCREEN} component={WelcomeScreen} />
+      <MainStack.Screen name={SCREENS_NAME.AUTH_STACK} component={AuthStack} />
+      <MainStack.Screen name={SCREENS_NAME.TAB_STACK} component={MainTab} />
     </MainStack.Navigator>
   );
 };
