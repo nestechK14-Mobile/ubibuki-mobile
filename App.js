@@ -12,7 +12,6 @@ import ChooseOption from './src/screens/08ChooseOption';
 
 const MainStack = createNativeStackNavigator();
 
-
 const App = () => {
   return (
     <NavigationContainer>
