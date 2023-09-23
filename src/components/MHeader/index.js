@@ -1,50 +1,61 @@
+import { isEmpty } from 'lodash';
 import React, { memo } from 'react';
-import MView from '../MView';
-import MText from '../MText';
-import { VIEW_TYPE } from '@/constants';
 import MButton from '../MButton';
 import MImage from '../MImage';
+import MText from '../MText';
+import MView from '../MView';
 import styles from './styles';
 
 const MHeader = props => {
-  const { leftContent = {}, rightContent = {}, title = '', ...rest } = props;
-
-  const renderContent = content => {
-    const {
-      isPress = false,
-      isView = false,
-      title = '',
-      icon = null,
-      noChildren = false,
-      newChildren
-    } = content;
-
-    return (
-      <>
-        {noChildren && <MView type={VIEW_TYPE.VIEW} />}
-        {newChildren && newChildren?.()}
-        {isPress && (
-          <MButton {...rest}>
-            {title && <MText {...rest}>{title}</MText>}
-            {icon && <MImage source={icon} />}
-          </MButton>
-        )}
-        {isView && (
-          <MView {...rest}>
-            {title && <MText {...rest}>{title}</MText>}
-            {icon && <MImage source={icon} />}
-          </MView>
-        )}
-      </>
-    );
-  };
+  const {
+    leftContent = {},
+    rightContent = {},
+    mainTitle = '',
+    containerStyle = {},
+    ...rest
+  } = props;
 
   return (
-    <MView type={VIEW_TYPE.VIEW} style={styles.container}>
-      {/* {renderContent(leftContent)}
-      {title && <MText>{title}</MText>}
-      {renderContent(rightContent)} */}
-      <MText>Header Content</MText>
+    <MView containerStyle={containerStyle ?? styles.container}>
+      {!isEmpty(leftContent) ? (
+        <MView containerStyle={leftContent.containerStyle}>
+          {leftContent.newChildren && leftContent.newChildren?.()}
+          {leftContent.isPress && (
+            <MButton {...rest}>
+              {leftContent.title && <MText {...rest}>{leftContent.title}</MText>}
+              {leftContent.icon && <MImage source={leftContent.icon} />}
+            </MButton>
+          )}
+          {leftContent.isView && (
+            <MView {...rest}>
+              {leftContent.title && <MText {...rest}>{leftContent.title}</MText>}
+              {leftContent.icon && <MImage source={leftContent.icon} />}
+            </MView>
+          )}
+        </MView>
+      ) : (
+        <MView />
+      )}
+      {mainTitle ? <MText>{mainTitle}</MText> : <></>}
+      {rightContent ? (
+        <MView containerStyle={rightContent.containerStyle}>
+          {rightContent.newChildren && rightContent.newChildren?.()}
+          {rightContent.isPress && (
+            <MButton {...rest}>
+              {rightContent.title && <MText {...rest}>{rightContent.title}</MText>}
+              {rightContent.icon && <MImage source={rightContent.icon} />}
+            </MButton>
+          )}
+          {rightContent.isView && (
+            <MView {...rest}>
+              {rightContent.title && <MText {...rest}>{rightContent.title}</MText>}
+              {rightContent.icon && <MImage source={rightContent.icon} />}
+            </MView>
+          )}
+        </MView>
+      ) : (
+        <MView />
+      )}
     </MView>
   );
 };

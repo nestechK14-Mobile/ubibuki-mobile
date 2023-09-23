@@ -1,15 +1,13 @@
-import { ActivityIndicator } from 'react-native';
+import { COLORS } from '@/constants';
 import React, { memo } from 'react';
-import MView from '../MView';
-import { COLORS } from '../../constants/common';
+import { ActivityIndicator, View } from 'react-native';
 import styles from './styles';
 
-const MLoading = props => {
-  const { ...rest } = props;
+const MLoading = () => {
   return (
-    <MView style={styles.container}>
-      <ActivityIndicator size={'large'} color={COLORS.RED_500} {...rest} />
-    </MView>
+    <View style={styles.container}>
+      <ActivityIndicator size={'large'} color={COLORS.RED_500} />
+    </View>
   );
 };
 

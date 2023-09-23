@@ -1,7 +1,7 @@
-import { View, SafeAreaView, ScrollView, KeyboardAvoidingView } from 'react-native';
+import { VIEW_TYPE } from '@/constants';
 import React, { memo } from 'react';
+import { KeyboardAvoidingView, SafeAreaView, ScrollView, View } from 'react-native';
 import MLoading from '../MLoading';
-import { VIEW_TYPE } from '@/constants/common';
 
 const MView = props => {
   const { type = VIEW_TYPE.VIEW, children, isLoading = false, contentStyle = {}, ...rest } = props;
