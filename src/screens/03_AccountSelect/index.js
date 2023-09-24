@@ -10,13 +10,16 @@ const AccountSelect = () => {
 
 
   const nextScreen = useNavigation();
-  const pressAnyAccount  = () => {
-    nextScreen.navigate(SCREEN_NAME.CINEMA_LOCATION);
+  const pressAddAccount  = () => {
+    nextScreen.navigate(SCREEN_NAME.VERIFY_MOBILE_NUMBER);
   };
-
+  const nextScreen0 = useNavigation();
+  const pressAnyAccount  = () => {
+    nextScreen0.navigate(SCREEN_NAME.CINEMA_LOCATION);
+  };
   const nextScreen1 = useNavigation();
   const pressTerm  = () => {
-    nextScreen1.navigate(SCREEN_NAME.VERIFY_MOBILE_NUMBER);
+    nextScreen1.navigate(SCREEN_NAME.PRIVATE_POLICY);
   };
   const nextScreen2 = useNavigation();
   const pressPolicy  = () => {
@@ -36,7 +39,7 @@ const AccountSelect = () => {
               <Text style={{ fontSize: 15 }}> to continue to Movie Ticket booking</Text>
             </View>
 
-            <TouchableOpacity onPress={pressTerm}>
+            <TouchableOpacity onPress={pressAnyAccount}>
             <View style={styles.accountInfo}>
             <View>
             <Image style={styles.accountAvatar} source={require('../../assets/mitumi.png')} />
@@ -48,7 +51,7 @@ const AccountSelect = () => {
               </View>
               </TouchableOpacity>
 
-              <TouchableOpacity onPress={pressTerm}>
+              <TouchableOpacity onPress={pressAnyAccount}>
               <View style={styles.accountInfo}>
               <View>
               <Image style={styles.accountAvatar} source={require('../../assets/mitumi.png')} />
@@ -60,7 +63,7 @@ const AccountSelect = () => {
                 </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={pressPolicy}>
+                <TouchableOpacity onPress={pressAnyAccount}>
                 <View style={styles.accountInfo}>
                 <View>
                 <Image style={styles.accountAvatar} source={require('../../assets/mitumi.png')} />
@@ -74,7 +77,7 @@ const AccountSelect = () => {
 
                   {/* !!!: AddAcount */}
 
-                  <TouchableOpacity onPress={pressAnyAccount}>
+                  <TouchableOpacity onPress={pressAddAccount}>
                   <View style={styles.accountInfo}>
                   <View>
                   <Image style={{marginLeft:20, width:30, height:30,resizeMode: 'contain'}} source={require('../../assets/addAccount.png')} />
@@ -89,19 +92,26 @@ const AccountSelect = () => {
                     {/* !!!: Policy and Term */}
 
                     <View style = {styles.PolicyAndTerm}>
-                    <Text style = {{fontSize: 16}}>To contine,Google will Share your
+                    
+                   
+                    <Text style = {{fontSize: 15}}>To contine,Google will Share your
                     name, email address and profile picture with Movies Time. Before using this app,
-                    review its</Text>
-                    <TouchableOpacity onPress={pressAnyAccount}> 
+                    review its
+                    </Text>
+
+                    <TouchableOpacity
+                    onPress={pressTerm}> 
                     <Text style = {{fontSize: 16, fontWeight: 'bold'}}> Privacy Policy</Text>
                     </TouchableOpacity>
-
-                    <Text style = {{fontSize: 16}}> and </Text>
-                    <TouchableOpacity onPress={pressAnyAccount}>
-                    <Text style = {{fontWeight:'bold'}}>Terms 
+                    
+                    <Text style = {{justi:'center',fontSize: 16}}> and </Text>
+                    
+                    
+                    <TouchableOpacity onPress={pressPolicy}>
+                    <Text style = {{fontSize: 16, fontWeight:'bold'}}>Terms 
                     of Service 
                     </Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> 
                     </View>
 
 

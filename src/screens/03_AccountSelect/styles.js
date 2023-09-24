@@ -48,7 +48,6 @@ const styles = StyleSheet.create({
   PolicyAndTerm:{
     padding: 20,
     flexDirection: 'row',
-    justifyContent:'flex-start',
     flexWrap:'wrap'
   }
 });
