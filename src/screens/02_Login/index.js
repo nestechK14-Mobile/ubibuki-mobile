@@ -13,8 +13,9 @@ const Login = () => {
     navigation.navigate(SCREEN_NAME.ACCOUNT_SELECT);
    
   };
+  
   const ToTermPage = useNavigation();
-const PressTerm = () => {
+  const PressTerm = () => {
   ToTermPage.navigate(SCREEN_NAME.TERM_AND_CONTDITION)
 
 };

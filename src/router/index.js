@@ -25,11 +25,11 @@ const MainRouter = () => {
   return (
     <MainStack.Navigator screenOptions={{ 
       headerStyle: {
-        backgroundColor: '#f4511e',
+        backgroundColor: '#f4511e'
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
-        fontWeight: 'bold',
+        fontWeight: 'bold'
       },
     
       headerShown: false }}>
