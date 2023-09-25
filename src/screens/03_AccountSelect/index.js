@@ -101,14 +101,14 @@ const AccountSelect = () => {
 
                     <TouchableOpacity
                     onPress={pressTerm}> 
-                    <Text style = {{fontSize: 16, fontWeight: 'bold'}}> Privacy Policy</Text>
+                    <Text style = {{fontSize: 16, fontWeight: 'bold', color: 'red'}}> Privacy Policy</Text>
                     </TouchableOpacity>
                     
                     <Text style = {{justi:'center',fontSize: 16}}> and </Text>
                     
                     
                     <TouchableOpacity onPress={pressPolicy}>
-                    <Text style = {{fontSize: 16, fontWeight:'bold'}}>Terms 
+                    <Text style = {{fontSize: 16, fontWeight:'bold', color: 'red'}}>Terms 
                     of Service 
                     </Text>
                     </TouchableOpacity> 

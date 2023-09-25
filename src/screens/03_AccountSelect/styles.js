@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     borderRadius: 60,
     marginHorizontal: 10,//resizeMode: 'contain'
     marginVertical:10,
-    borderWidth:1,
+    borderWidth:2,
     borderColor: 'red'
   },
   PolicyAndTerm:{
