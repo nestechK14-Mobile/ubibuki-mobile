@@ -49,5 +49,6 @@ export const COLORS = {
   BLACK_500: '#00000050',
   BLACK: '#000000',
   WHITE: '#FFFFFF',
-  TRANSPARENT: 'transparent'
+  TRANSPARENT: 'transparent',
+  GRAY_500: '#00000007'
 };

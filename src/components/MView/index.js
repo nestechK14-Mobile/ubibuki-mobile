@@ -4,7 +4,7 @@ import { KeyboardAvoidingView, SafeAreaView, ScrollView, View } from 'react-nati
 import MLoading from '../MLoading';
 
 const MView = props => {
-  const { type = VIEW_TYPE.VIEW, children, isLoading = false, contentStyle = {}, ...rest } = props;
+  const { type = VIEW_TYPE.VIEW, children, isLoading = false, style = {}, ...rest } = props;
 
   const renderContent = (type, styles) => {
     switch (type) {
@@ -42,7 +42,7 @@ const MView = props => {
     }
   };
 
-  return <>{renderContent(type, contentStyle)}</>;
+  return <>{renderContent(type, style)}</>;
 };
 
 export default memo(MView);

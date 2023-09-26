@@ -16,43 +16,67 @@ const MHeader = props => {
   } = props;
 
   return (
-    <MView containerStyle={containerStyle ?? styles.container}>
+    <MView style={!isEmpty(containerStyle) ? containerStyle : styles.container} {...rest}>
       {!isEmpty(leftContent) ? (
-        <MView containerStyle={leftContent.containerStyle}>
+        <MView style={leftContent.containerStyle} {...rest}>
           {leftContent.newChildren && leftContent.newChildren?.()}
           {leftContent.isPress && (
-            <MButton {...rest}>
-              {leftContent.title && <MText {...rest}>{leftContent.title}</MText>}
-              {leftContent.icon && <MImage source={leftContent.icon} />}
+            <MButton style={leftContent.containerStyle} {...rest}>
+              {leftContent.title && (
+                <MText style={leftContent.titleStyle} {...rest}>
+                  {leftContent.title}
+                </MText>
+              )}
+              {leftContent.icon && (
+                <MImage source={leftContent.icon} style={leftContent.iconStyle} />
+              )}
             </MButton>
           )}
           {leftContent.isView && (
-            <MView {...rest}>
-              {leftContent.title && <MText {...rest}>{leftContent.title}</MText>}
-              {leftContent.icon && <MImage source={leftContent.icon} />}
+            <MView style={leftContent.containerStyle} {...rest}>
+              {leftContent.title && (
+                <MText style={leftContent.titleStyle} {...rest}>
+                  {leftContent.title}
+                </MText>
+              )}
+              {leftContent.icon && (
+                <MImage source={leftContent.icon} style={leftContent.iconStyle} />
+              )}
             </MView>
           )}
         </MView>
       ) : (
         <MView />
       )}
-      {mainTitle ? <MText>{mainTitle}</MText> : <></>}
-      {rightContent ? (
-        <MView containerStyle={rightContent.containerStyle}>
+      {mainTitle ? <MText {...rest}>{mainTitle}</MText> : <></>}
+      {!isEmpty(rightContent) ? (
+        <>
           {rightContent.newChildren && rightContent.newChildren?.()}
           {rightContent.isPress && (
-            <MButton {...rest}>
-              {rightContent.title && <MText {...rest}>{rightContent.title}</MText>}
-              {rightContent.icon && <MImage source={rightContent.icon} />}
+            <MButton style={rightContent.containerStyle} {...rest}>
+              {rightContent.title && (
+                <MText style={rightContent.titleStyle} {...rest}>
+                  {rightContent.title}
+                </MText>
+              )}
+              {rightContent.icon && (
+                <MImage source={rightContent.icon} style={rightContent.iconStyle} />
+              )}
             </MButton>
           )}
           {rightContent.isView && (
-            <MView {...rest}>
-              {rightContent.title && <MText {...rest}>{rightContent.title}</MText>}
-              {rightContent.icon && <MImage source={rightContent.icon} />}
+            <MView style={rightContent.containerStyle} {...rest}>
+              {rightContent.title && (
+                <MText style={rightContent.titleStyle} {...rest}>
+                  {rightContent.title}
+                </MText>
+              )}
+              {rightContent.icon && (
+                <MImage source={rightContent.icon} style={rightContent.iconStyle} />
+              )}
             </MView>
           )}
-        </MView>
+        </>
       ) : (
         <MView />
       )}
