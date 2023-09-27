@@ -5,7 +5,12 @@ import { FONTS, SCREEN_NAME } from '../../constants/screenNames';
 import styles from './styles';
 
 const VerifyMobileNumber = () => {
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [otp1, setotp1] = useState('');
+  const [otp2, setotp2] = useState('');
+  const [otp3, setotp3] = useState('');
+  const [otp4, setotp4] = useState('');
+  const [otp5, setotp5] = useState('');
+  const [otp6, setotp6] = useState('');
 
   const toback = useNavigation();
   const pressBACK = () => {
@@ -47,56 +52,32 @@ const VerifyMobileNumber = () => {
         <TextInput
           style={styles.otpnumber}
           keyboardType="numeric"
-          value={phoneNumber}
-          onChangeText={text => setPhoneNumber(text)}
+          value={otp1}
+          onChangeText={text => setotp1(text)}
           maxLength={1}
           textAlign="center"
+         
         />
 
         <TextInput
-          style={styles.otpnumber}
-          keyboardType="numeric"
-          value={phoneNumber}
-          onChangeText={text => setPhoneNumber(text)}
-          maxLength={1}
-          textAlign="center"
-        />
+        style={styles.otpnumber}
+        keyboardType="numeric"
+        value={otp2}
+        onChangeText={text => setotp2(text)}
+        maxLength={1}
+        textAlign="center"
+      />
 
-        <TextInput
-          style={styles.otpnumber}
-          keyboardType="numeric"
-          value={phoneNumber}
-          onChangeText={text => setPhoneNumber(text)}
-          maxLength={1}
-          textAlign="center"
-        />
 
-        <TextInput
-          style={styles.otpnumber}
-          keyboardType="numeric"
-          value={phoneNumber}
-          onChangeText={text => setPhoneNumber(text)}
-          maxLength={1}
-          textAlign="center"
-        />
+      <TextInput
+      style={styles.otpnumber}
+      keyboardType="numeric"
+      value={otp3}
+      onChangeText={text => setotp3(text)}
+      maxLength={1}
+      textAlign="center"
+    />
 
-        <TextInput
-          style={styles.otpnumber}
-          keyboardType="numeric"
-          value={phoneNumber}
-          onChangeText={text => setPhoneNumber(text)}
-          maxLength={1}
-          textAlign="center"
-        />
-
-        <TextInput
-          style={styles.otpnumber}
-          keyboardType="numeric"
-          value={phoneNumber}
-          onChangeText={text => setPhoneNumber(text)}
-          maxLength={1}
-          textAlign="center"
-        />
       </View>
 
       <TouchableOpacity style={styles.verify}>
