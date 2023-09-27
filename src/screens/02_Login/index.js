@@ -16,12 +16,12 @@ const Login = () => {
   
   const ToTermPage = useNavigation();
   const PressTerm = () => {
-  ToTermPage.navigate(SCREEN_NAME.TERM_AND_CONTDITION)
+  ToTermPage.navigate(SCREEN_NAME.TERM_AND_CONTDITION);
 
 };
 const ToPolicy= useNavigation();
 const PressPolicy = () => {
-  ToPolicy.navigate(SCREEN_NAME.PRIVATE_POLICY)
+  ToPolicy.navigate(SCREEN_NAME.PRIVATE_POLICY);
 
 };
   return (

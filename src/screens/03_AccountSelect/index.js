@@ -11,7 +11,7 @@ const AccountSelect = () => {
 
   const nextScreen = useNavigation();
   const pressAddAccount  = () => {
-    nextScreen.navigate(SCREEN_NAME.VERIFY_MOBILE_NUMBER);
+    nextScreen.navigate(SCREEN_NAME.TYPE_MOBILE_NUMBER);
   };
   const nextScreen0 = useNavigation();
   const pressAnyAccount  = () => {
