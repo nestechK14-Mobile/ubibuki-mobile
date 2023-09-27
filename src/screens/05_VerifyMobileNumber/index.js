@@ -14,12 +14,12 @@ const VerifyMobileNumber = () => {
 
   const toback = useNavigation();
   const pressBACK = () => {
-    toback.navigate(SCREEN_NAME.ACCOUNT_SELECT);
+    toback.navigate(SCREEN_NAME.TYPE_MOBILE_NUMBER);
   };
 
-  const toVerifyNumber = useNavigation();
-  const GoToVerifyNumber = () => {
-    toVerifyNumber.navigate(SCREEN_NAME.VERIFY_MOBILE_NUMBER);
+  const toCinemaLocation = useNavigation();
+  const GoToCinemaLocation = () => {
+    toCinemaLocation.navigate(SCREEN_NAME.CINEMA_LOCATION);
   };
 
   return (
@@ -89,7 +89,7 @@ const VerifyMobileNumber = () => {
             fontSize: 20,
             padding: 10
           }}
-          onPress={GoToVerifyNumber}>
+          onPress={GoToCinemaLocation}>
           VERIFY
         </Text>
       </TouchableOpacity>
