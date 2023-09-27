@@ -1,36 +1,119 @@
-
-import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { React, useState } from 'react';
+import { View, Text, TouchableOpacity, Image, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { SCREEN_NAME } from '../../constants/screenNames';
+import { FONTS, SCREEN_NAME } from '../../constants/screenNames';
+import styles from './styles';
 
 const VerifyMobileNumber = () => {
-  const navigation = useNavigation();
+  const [phoneNumber, setPhoneNumber] = useState('');
 
-  const pressNEXT  = () => {
-    navigation.navigate(SCREEN_NAME.CINEMA_LOCATION);
+  const toback = useNavigation();
+  const pressBACK = () => {
+    toback.navigate(SCREEN_NAME.ACCOUNT_SELECT);
+  };
+
+  const toVerifyNumber = useNavigation();
+  const GoToVerifyNumber = () => {
+    toVerifyNumber.navigate(SCREEN_NAME.VERIFY_MOBILE_NUMBER);
   };
 
   return (
     <View>
-      <Text 
-      style = {{padding: 10, 
-        alignItems: 'center',
-         fontSize: 30} }>
-
-         VerifyMobileNumber
-         
-         </Text>
-
       <TouchableOpacity
-      onPress={pressNEXT}
+        style={{
+          padding: 20
+        }}
+        onPress={pressBACK}>
+        <Image source={require('../../assets/BackVector.png')} />
+      </TouchableOpacity>
 
-      style={{ width: 100, height: 100, backgroundColor: 'green' }}>
-      <Text style = {{padding: 10, alignItems: 'center', fontSize: 30} }>NEXT</Text>
-    </TouchableOpacity>
+      <View style={styles.Header}>
+        <Text
+          style={{
+            paddingTop: 100,
+            fontSize: 22,
+            fontWeight: 700,
+            fontFamily: FONTS.BOLD
+          }}>
+          Verify your Phone Number
+        </Text>
+      </View>
+      <View style={{ paddingLeft: 20, paddingTop: 25 }}>
+        <Text style={{ fontFamily: FONTS.MEDIUM, fontWeight: 400, fontSize: 16 }}>
+          Enter the OTP sent to xxx
+        </Text>
+      </View>
+      <View style={styles.otpFill}>
+        <TextInput
+          style={styles.otpnumber}
+          keyboardType="numeric"
+          value={phoneNumber}
+          onChangeText={text => setPhoneNumber(text)}
+          maxLength={1}
+          textAlign="center"
+        />
+
+        <TextInput
+          style={styles.otpnumber}
+          keyboardType="numeric"
+          value={phoneNumber}
+          onChangeText={text => setPhoneNumber(text)}
+          maxLength={1}
+          textAlign="center"
+        />
+
+        <TextInput
+          style={styles.otpnumber}
+          keyboardType="numeric"
+          value={phoneNumber}
+          onChangeText={text => setPhoneNumber(text)}
+          maxLength={1}
+          textAlign="center"
+        />
+
+        <TextInput
+          style={styles.otpnumber}
+          keyboardType="numeric"
+          value={phoneNumber}
+          onChangeText={text => setPhoneNumber(text)}
+          maxLength={1}
+          textAlign="center"
+        />
+
+        <TextInput
+          style={styles.otpnumber}
+          keyboardType="numeric"
+          value={phoneNumber}
+          onChangeText={text => setPhoneNumber(text)}
+          maxLength={1}
+          textAlign="center"
+        />
+
+        <TextInput
+          style={styles.otpnumber}
+          keyboardType="numeric"
+          value={phoneNumber}
+          onChangeText={text => setPhoneNumber(text)}
+          maxLength={1}
+          textAlign="center"
+        />
+      </View>
+
+      <TouchableOpacity style={styles.verify}>
+        <Text
+          style={{
+            fontFamily: FONTS.BOLD,
+            fontWeight: 700,
+            color: 'white',
+            fontSize: 20,
+            padding: 10
+          }}
+          onPress={GoToVerifyNumber}>
+          VERIFY
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
 export default VerifyMobileNumber;
-
