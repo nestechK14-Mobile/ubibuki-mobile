@@ -46,7 +46,6 @@ const CinemaLocation = () => {
 
       <Text
         style={{
-          fontColor: 'black',
           paddingHorizontal: 15,
           fontSize: 20,
           fontWeight: 700,
