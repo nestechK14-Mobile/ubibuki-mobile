@@ -1,17 +1,17 @@
-import { View, Text, Image, SafeAreaView} from 'react-native';
+import { View, Text, Image, SafeAreaView, ScrollView } from 'react-native';
 import React from 'react';
 import Header from '../../components/Header';
 import styles from './styles';
 import Banner from './sections/banner';
 
-const WelcomeScreen =() => {
+const WelcomeScreen = () => {
   return (
-    (<SafeAreaView style={styles.container}> 
+    <SafeAreaView style={styles.container}>
       <Header />
-      <View style={{ height: 8, backgroundColor: 'blue', marginVertical: 10 }} />
+      <View style={{ height: 4, backgroundColor: 'blue', marginVertical: 4 }} />
       <Banner />
-    </SafeAreaView>)
-      );
+    </SafeAreaView>
+  );
 };
 
 export default WelcomeScreen;

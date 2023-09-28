@@ -9,7 +9,9 @@ const MainStack = createNativeStackNavigator();
 
 const MainRouter = () => {
   return (
-    <MainStack.Navigator>
+    <MainStack.Navigator 
+      screenOptions={{headerShown: false}}
+      initialRouteName={SCREEN_NAME.HOME_SCREEN}>
       <MainStack.Screen name={SCREEN_NAME.WELCOME_SCREEN} component={WelcomeScreen} />
       <MainStack.Screen name={SCREEN_NAME.HOME_SCREEN} component={HomeScreen} />
       <MainStack.Screen name={SCREEN_NAME.DETAIL_SCREEN} component={DetailScreen} />
