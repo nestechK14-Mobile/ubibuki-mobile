@@ -50,7 +50,42 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: SPACING.Medium
   },
-  bottomContainer: {}
+  bottomContainer: {
+    marginVertical: SPACING.Medium,
+    flex: 1,
+    alignItems: 'center',
+    width: '100%'
+  },
+  containerInput: {
+    alignItems: 'flex-start',
+    width: DEVICE.WIDTH - scale(32)
+  },
+  inputMobile: {
+    backgroundColor: COLORS.GRAY_500,
+    marginTop: scale(8),
+    width: '100%',
+    paddingHorizontal: SPACING.Medium,
+    borderRadius: scale(12)
+  },
+  containerTitleBottom: {
+    marginBottom: scale(32),
+    width: DEVICE.WIDTH,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center'
+  },
+  titleBottom: {
+    fontSize: scale(14),
+    color: COLORS.BLACK_400,
+    fontFamily: FONTS_NAMES.REGULAR
+  },
+  mainTitleBottom: {
+    fontSize: scale(14),
+    color: COLORS.BLACK,
+    fontFamily: FONTS_NAMES.REGULAR,
+    marginHorizontal: scale(4),
+    textDecorationLine: 'underline'
+  }
 });
 
 export default styles;

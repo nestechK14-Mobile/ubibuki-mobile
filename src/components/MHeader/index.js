@@ -21,7 +21,7 @@ const MHeader = props => {
         <MView style={leftContent.containerStyle} {...rest}>
           {leftContent.newChildren && leftContent.newChildren?.()}
           {leftContent.isPress && (
-            <MButton style={leftContent.containerStyle} {...rest}>
+            <MButton style={leftContent.containerStyle} onPress={leftContent.onPress} {...rest}>
               {leftContent.title && (
                 <MText style={leftContent.titleStyle} {...rest}>
                   {leftContent.title}
@@ -53,7 +53,7 @@ const MHeader = props => {
         <>
           {rightContent.newChildren && rightContent.newChildren?.()}
           {rightContent.isPress && (
-            <MButton style={rightContent.containerStyle} {...rest}>
+            <MButton style={rightContent.containerStyle} onPress={rightContent.onPress} {...rest}>
               {rightContent.title && (
                 <MText style={rightContent.titleStyle} {...rest}>
                   {rightContent.title}
