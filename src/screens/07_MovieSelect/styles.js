@@ -10,9 +10,7 @@ const styles = StyleSheet.create({
 ,
 
       movies: {
-        //width: 400,
-        height: 1200,
-        //backgroundColor: 'gray'
+paddingBottom: 280
 
       }
 

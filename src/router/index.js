@@ -16,9 +16,10 @@ import MovieSelect from 'screens/07_MovieSelect';
 import MovieTimeListing from 'screens/08_MovieTimeListing';
 import AboutMovie from 'screens/09_AboutMovie';
 import TermAndCondition from 'screens/10_TermAndCondition';
-
-
 import PrivatePolicy from 'screens/11_PrivatePolicy';
+import Bottomtab from './tabRouter';
+
+
 const MainStack = createNativeStackNavigator();
 
 const MainRouter = () => {
@@ -35,7 +36,7 @@ const MainRouter = () => {
       headerShown: false }}>
 
       
-      
+      <MainStack.Screen name={'BottomTAB'} component={Bottomtab} />
       
       <MainStack.Screen name={SCREEN_NAME.MOVIE_SELECT} component={MovieSelect} />
       <MainStack.Screen name={SCREEN_NAME.LOGIN} component={Login} />
@@ -57,3 +58,6 @@ const MainRouter = () => {
 };
 
 export default MainRouter;
+
+
+

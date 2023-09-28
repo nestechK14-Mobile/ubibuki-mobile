@@ -205,17 +205,16 @@ const MovieSelect = () => {
    Upcoming Movies
  </Text>
  <View>
+ 
  <ScrollView
-   horizontal
-   showsHorizontalScrollIndicator={false}
-   snapToInterval={windowWidth} //your element width
+ horizontal
+ showsHorizontalScrollIndicator={false}
+ snapToInterval={windowWidth} //your element width
    snapToAlignment="center"
    //scrollToOverflowEnabled
- >
+   >
    <View style={{ flexDirection: 'row' }}>
-     <View style={{ width: windowWidth, paddingBottom: 10, alignItems: 'center' }}>
-       <Image source={require('../../assets/SliderPhoto.png')}></Image>
-     </View>
+
      <View style={{ width: windowWidth, paddingBottom: 10, alignItems: 'center' }}>
        <Image source={require('../../assets/upcoming.png')}></Image>
      </View>
@@ -224,13 +223,13 @@ const MovieSelect = () => {
      </View>
      <View style={{ width: windowWidth, paddingBottom: 10, alignItems: 'center' }}>
        <Image source={require('../../assets/upcoming.png')}></Image>
-     </View>
-     <View style={{ width: windowWidth, paddingBottom: 10, alignItems: 'center' }}>
+       </View>
+       <View style={{ width: windowWidth, paddingBottom: 10, alignItems: 'center' }}>
        <Image source={require('../../assets/SliderPhoto.png')}></Image>
-     </View>
-   </View>
- </ScrollView>
-</View>
+       </View>
+       </View>
+       </ScrollView>
+       </View>
 
 
 
