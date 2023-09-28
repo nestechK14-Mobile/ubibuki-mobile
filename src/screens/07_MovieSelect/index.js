@@ -76,7 +76,10 @@ const MovieSelect = () => {
 
       {/*Scroll Book Ticket*/}
 
-      <ScrollView>
+      <ScrollView 
+      //ScrollVew Option ????
+      
+      >
       <View style = {{position: 'relative', zIndex: -1}}>
       
       
