@@ -7,7 +7,14 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         position: 'relative'
       }
+,
 
+      movies: {
+        //width: 400,
+        height: 1200,
+        //backgroundColor: 'gray'
+
+      }
 
 });
 
