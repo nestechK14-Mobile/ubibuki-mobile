@@ -1,42 +1,51 @@
-import { View, Text, TouchableOpacity, Image, SafeAreaView } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Image,
+  SafeAreaView,
+  ScrollView,
+  KeyboardAvoidingView,
+  Platform
+} from 'react-native';
 import React from 'react';
 import styles from '../home/styles';
 import { useNavigation } from '@react-navigation/native';
 import { SCREEN_NAME } from 'constants';
-import { IMG_LogoGoogle, IMG_LogoPopCorn } from '../../assets/images';
+import { IMG_LogoPopCorn } from '../../assets/images';
+import LoginGoogle from './login/loginGoogle';
+import PhoneNumber from './phone/phoneNumber';
+
 const HomeScreen = () => {
   const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.headerContainer}>
-        <View />
-        <TouchableOpacity onPress={() => navigation.navigate(SCREEN_NAME.WELCOME_SCREEN)}>
-          <Text style={styles.titleRightHeader} allowFontScaling={false}>
-            SKIP
-          </Text>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.bodyContainer}>
-        <Image source={IMG_LogoPopCorn} />
-        <View style={styles.containerButton}>
-          <TouchableOpacity style={styles.buttonGoogle}>
-            <Image source={IMG_LogoGoogle} style={{ marginRight: 12 }} />
-            <Text allowFontScaling={false}>Log With Google</Text>
-          </TouchableOpacity>
-        </View>
-        <View>
-          <TouchableOpacity style={styles.buttonGoogle}>
-            <Text allowFontScaling={false} style={styles.textDefault}>
-              Log With Email
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <View>
-          <View style={styles.line} />
-          <text style={styles.textDefault}>Or</text>
-          <View style={styles.line} />
-        </View>
-      </View>
+      <ScrollView
+        style={{ flex: 1 }}
+        contentContainerStyle={{ flexGrow: 0 }}
+        showsVerticalScrollIndicator={false}
+        bounces={false}
+        bouncesZoom={false}
+        keyboardShouldPersistTaps={'handle'}>
+        <KeyboardAvoidingView
+          keyboardVerticalOffset={32}
+          behavior={Platform.OS == 'android' ? 'position' : 'padding'}
+          style={styles.container}>
+          <View style={styles.headerContainer}>
+            <View />
+            <TouchableOpacity onPress={() => navigation.navigate(SCREEN_NAME.WELCOME_SCREEN)}>
+              <Text style={styles.titleRightHeader} allowFontScaling={false}>
+                SKIP
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.bodyContainer}>
+            <Image source={IMG_LogoPopCorn} />
+            <LoginGoogle />
+            <PhoneNumber />
+          </View>
+        </KeyboardAvoidingView>
+      </ScrollView>
     </SafeAreaView>
   );
 };
