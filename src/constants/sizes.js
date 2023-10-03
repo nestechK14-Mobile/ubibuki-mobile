@@ -1,4 +1,4 @@
-import { scale } from '../utils/scale';
+import { scale } from '@/utils';
 
 export const LINE_HEIGHT = {
   BoldTitle: scale(50),

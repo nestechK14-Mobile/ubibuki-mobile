@@ -1,6 +1,6 @@
-import { TouchableOpacity, TouchableHighlight, TouchableWithoutFeedback } from 'react-native';
-import React, { memo } from 'react';
 import { BUTTON_TYPE } from '@/constants';
+import React, { memo } from 'react';
+import { TouchableHighlight, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
 
 const MButton = props => {
   const { type = BUTTON_TYPE.BUTTON, children, ...rest } = props;

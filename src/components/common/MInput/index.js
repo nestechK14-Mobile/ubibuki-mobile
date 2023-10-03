@@ -12,7 +12,7 @@ const MInput = props => {
         {title}
       </MText>
       <MView style={inputStyle}>
-        <TextInput allowFontScaling={false} autoComplete="off" {...rest} />
+        <TextInput autoComplete="off" {...rest} />
       </MView>
     </MView>
   );

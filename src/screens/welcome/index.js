@@ -20,7 +20,7 @@ const WelcomeScreen = () => {
           isPress: true,
           title: 'SKIP',
           titleStyle: styles.rightTitleHeader,
-          onPress: () => onSkip()
+          onPress: onSkip
         }}
       />
       <MView style={styles.bodyContainer}>

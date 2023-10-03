@@ -1,4 +1,4 @@
-import { MText, MView } from '@/components';
+import { MText, MView } from '@/components/common';
 import React from 'react';
 import styles from './styles';
 
