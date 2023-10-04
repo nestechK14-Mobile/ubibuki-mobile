@@ -6,7 +6,7 @@ const Screen1 = () => {
   const navigation = useNavigation();
 
   const pressToScreen2 = () => {
-    navigation.navigate('Screen2', { phoneNumber: '0123456' });
+    navigation.navigate('Screen2', { phoneNumber: '3333' });
   };
 
   return (

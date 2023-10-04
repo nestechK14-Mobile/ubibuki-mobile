@@ -9,10 +9,10 @@ const App = () => {
     SplashScreen.hide();
   }, []);
 
-  useEffect(() => {
-    const backHandler = BackHandler.addEventListener('hardwareBackPress', () => true);
-    return () => backHandler.remove();
-  }, []);
+  // useEffect(() => {
+  //   const backHandler = BackHandler.addEventListener('hardwareBackPress', () => true);
+  //   return () => backHandler.remove();
+  // }, []);
 
   return (
     <NavigationContainer>

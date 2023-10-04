@@ -31,7 +31,7 @@ const Screen2 = () => {
       {!route?.params?.phoneNumber ? (
         <ActivityIndicator />
       ) : (
-        <Text style={{ fontFamily: FONTS.REGULAR }}>{route.params?.phoneNumber ?? ''}</Text>
+        <Text style={{ fontFamily: FONTS.REGULAR }}> {route.params?.phoneNumber ?? ''} </Text>
       )}
     </View>
   );
