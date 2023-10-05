@@ -1,18 +1,18 @@
+import { useNavigation } from '@react-navigation/native';
+import React from 'react';
 import {
-  View,
-  Text,
-  TouchableOpacity,
   Image,
+  KeyboardAvoidingView,
+  Platform,
   SafeAreaView,
   ScrollView,
-  KeyboardAvoidingView,
-  Platform
+  Text,
+  TouchableOpacity,
+  View
 } from 'react-native';
-import React from 'react';
-import styles from '../home/styles';
-import { useNavigation } from '@react-navigation/native';
-import { SCREEN_NAME } from 'constants';
 import { IMG_LogoPopCorn } from '../../assets/images';
+import { SCREEN_NAME } from '../../constants/router';
+import styles from '../home/styles';
 import LoginGoogle from './login/loginGoogle';
 import PhoneNumber from './phone/phoneNumber';
 
