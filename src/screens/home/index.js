@@ -13,8 +13,8 @@ import {
 import { IMG_LogoPopCorn } from '../../assets/images';
 import { SCREEN_NAME } from '../../constants/router';
 import styles from '../home/styles';
-import LoginGoogle from './login/loginGoogle';
-import PhoneNumber from './phone/phoneNumber';
+import LoginGoogle from './sections/login';
+import PhoneNumber from './sections/phone';
 
 const HomeScreen = () => {
   const navigation = useNavigation();

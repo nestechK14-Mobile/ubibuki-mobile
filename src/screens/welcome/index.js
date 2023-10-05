@@ -1,8 +1,8 @@
-import { View, Text, Image, SafeAreaView, ScrollView } from 'react-native';
 import React from 'react';
-import Header from '../../components/Header';
-import styles from './styles';
+import { Image, SafeAreaView, ScrollView, Text, View } from 'react-native';
+import Header from '../../components/header';
 import Banner from './sections/banner';
+import styles from './styles';
 
 const WelcomeScreen = () => {
   return (

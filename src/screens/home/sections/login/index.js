@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
-import { IMG_LogoGoogle } from '../../../assets/images';
-import styles from '../styles';
+import { IMG_LogoGoogle } from '../../../../assets/images';
+import styles from '../../styles';
 
 const LoginGoogle = () => {
   return (
