@@ -6,8 +6,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.WHITE,
-    alignItems: 'center',
-    paddingHorizontal: SPACING.Medium
+    alignItems: 'center'
   },
   rightTitleHeader: {
     fontFamily: FONTS_NAMES.REGULAR,
@@ -51,10 +50,10 @@ const styles = StyleSheet.create({
     fontSize: SPACING.Medium
   },
   bottomContainer: {
-    marginVertical: SPACING.Medium,
     flex: 1,
     alignItems: 'center',
-    width: '100%'
+    marginTop: SPACING.Medium,
+    justifyContent: 'space-around'
   },
   containerInput: {
     alignItems: 'flex-start',
@@ -68,11 +67,11 @@ const styles = StyleSheet.create({
     borderRadius: scale(12)
   },
   containerTitleBottom: {
-    marginBottom: scale(32),
     width: DEVICE.WIDTH,
     alignItems: 'center',
     flexDirection: 'row',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginVertical: SPACING.Normal
   },
   titleBottom: {
     fontSize: scale(14),

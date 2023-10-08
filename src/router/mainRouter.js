@@ -1,4 +1,4 @@
-import { SCREENS_NAME } from '@/constants';
+import { SCREENS_NAME, SCREEN_STACK } from '@/constants';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React, { useLayoutEffect } from 'react';
 import SplashScreen from 'react-native-splash-screen';
@@ -18,8 +18,8 @@ const MainRouter = () => {
 
   return (
     <MainStack.Navigator screenOptions={defaultConfig}>
-      <MainStack.Screen name={SCREENS_NAME.AUTH_STACK} component={AuthStack} />
-      <MainStack.Screen name={SCREENS_NAME.TAB_STACK} component={MainTab} />
+      <MainStack.Screen name={SCREEN_STACK.AUTH_STACK} component={AuthStack} />
+      <MainStack.Screen name={SCREEN_STACK.TAB_STACK} component={MainTab} />
     </MainStack.Navigator>
   );
 };

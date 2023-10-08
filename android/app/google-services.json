@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "286112083263",
+    "project_id": "ukibuki-mobile",
+    "storage_bucket": "ukibuki-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286112083263:android:d6122386206444fcfd778a",
+        "android_client_info": {
+          "package_name": "com.dummyproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiT_QS3de6Rf5D1RBdSOwYyKk8uZR_jSA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

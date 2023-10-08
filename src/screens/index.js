@@ -1,5 +1,7 @@
 export { default as BookingDetailScreen } from './bookingDetail';
 export { default as BookingScreen } from './bookings';
+export { default as LoginWithEmailScreen } from './loginWithEmail';
+export { default as LoginWithPhoneNumberScreen } from './loginWithPhoneNumber';
 export { default as MovieDetailScreen } from './movieDetail';
 export { default as MoviesScreen } from './movies';
 export { default as ProfileScreen } from './profile';
