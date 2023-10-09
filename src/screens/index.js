@@ -6,3 +6,4 @@ export { default as OTPNumber } from './05OTPNumber';
 export { default as ChoseCity } from './06ChoseCity';
 export { default as Mainmenu } from './07Mainmenu';
 export { default as ChooseOption } from './08ChooseOption';
+export { default as TabRouter } from './../router/TabRouter';

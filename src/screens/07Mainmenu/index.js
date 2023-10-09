@@ -4,7 +4,7 @@ import React from 'react';
 const Mainmenu = () => {
   return (
     <View>
-      <Text>DetailScreen</Text>
+      <Text>aa</Text>
     </View>
   );
 };

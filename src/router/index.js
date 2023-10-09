@@ -10,6 +10,7 @@ import OTPNumber from '../screens/05OTPNumber';
 import ChoseCity from '../screens/06ChoseCity';
 import Mainmenu from '../screens/07Mainmenu';
 import ChooseOption from '../screens/08ChooseOption';
+import TabRouter from './TabRouter';
 
 const MainStack = createNativeStackNavigator();
 

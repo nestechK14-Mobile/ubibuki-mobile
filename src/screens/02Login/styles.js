@@ -5,6 +5,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     flex: 1
   },
+  nut: {
+    width: 64,
+    alignSelf: 'flex-end',
+    paddingRight: 20,
+    padding: 8
+  },
 
   styleAppLogo: {
     marginTop: 125,
@@ -15,9 +21,30 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 20
+    padding: 16
   },
-  ViewGGLogin: {}
+  ViewGGLogin: {
+    margin: 10,
+    backgroundColor: '#888888',
+    borderRadius: 20
+  },
+  line: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  line1: {
+    fontWeight: '700',
+    width: 100,
+    height: 1,
+    backgroundColor: 'black',
+    margin: 10
+  },
+  MobileNumber: {
+    margin: 16,
+    fontWeight: '700',
+    color: '#000'
+  }
 });
 
 export default styles;

@@ -4,7 +4,7 @@ import React from 'react';
 const ChooseOption = () => {
   return (
     <View>
-      <Text>DetailScreen</Text>
+      <Text>ádsad</Text>
     </View>
   );
 };
