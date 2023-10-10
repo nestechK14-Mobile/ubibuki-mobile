@@ -1,10 +1,17 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
+import styles from '../04InputNumber/styles';
 
 const InputNumber = () => {
   return (
     <View>
-      <Text>HomeScreen</Text>
+      <View style={styles.header}>
+        <Image source={require('../../assets/MoviesTimes.png')} />
+        <Image source={require('../../assets/SearchIcon.png')} />
+      </View>
+      <View style={styles.ScrollView}>
+        <Image source={require('../../assets/HinhPhimScroll.png')} />
+      </View>
     </View>
   );
 };
