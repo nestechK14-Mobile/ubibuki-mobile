@@ -1,18 +1,12 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import splash from './src/screens/splash'; // Đảm bảo import màn hình mới của bạn
+import { Text, View } from 'react-native';
 
-const Stack = createStackNavigator();
-
-function App() {
+const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="SPLASH" component={splash} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <View>
+      <Text>App</Text>
+    </View>
   );
-}
+};
 
 export default App;
