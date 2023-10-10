@@ -9,9 +9,6 @@ const InputNumber = () => {
         <Image source={require('../../assets/MoviesTimes.png')} />
         <Image source={require('../../assets/SearchIcon.png')} />
       </View>
-      <View style={styles.ScrollView}>
-        <Image source={require('../../assets/HinhPhimScroll.png')} />
-      </View>
     </View>
   );
 };
