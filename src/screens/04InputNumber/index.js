@@ -17,7 +17,7 @@ const InputNumber = () => {
       </View>
       <FlatList>
         data={data}
-        horizontal showsHorizontalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}
         keyExtractor={item => item.id}
         renderItem={({ item }) => <Image source={item.source} style={styles.image} />}
       </FlatList>
