@@ -1,29 +1,33 @@
-import { IMG_AppLogo, IMG_Google } from '@/assets';
+import { IC_Next, IMG_AppLogo, IMG_Google } from '@/assets';
 import { MButton, MHeader, MImage, MInput, MText, MView } from '@/components';
-import { SCREENS_NAME, VIEW_TYPE } from '@/constants';
+import { COLORS, SCREENS_NAME, VIEW_TYPE } from '@/constants';
 import { scale } from '@/utils';
 import { useNavigation } from '@react-navigation/native';
-import React from 'react';
+import React, { useState } from 'react';
 import { Platform } from 'react-native';
 import styles from './styles';
+import { useDispatch } from 'react-redux';
+import { signUpWithEmail } from '@/redux/authStore/slice';
 
 const WelcomeScreen = () => {
+  const [phone, setPhone] = useState('');
   const navigation = useNavigation();
+  const dispatch = useDispatch();
 
-  const onSkip = () => {
-    navigation.navigate(SCREENS_NAME.TAB_STACK);
+  const onPhoneLogin = () => {
+    navigation.navigate(SCREENS_NAME.LOGIN_WITH_PHONE_NUMBER);
   };
+
+  const onEmailLogin = () => {
+    // navigation.navigate(SCREENS_NAME.LOGIN_WITH_EMAIL);
+    dispatch(signUpWithEmail({ email: 'namnh98@gmail.com', password: '123456' }));
+  };
+
+  const onGoogleLogin = () => {};
 
   return (
     <MView type={VIEW_TYPE.SAFE_AREA_VIEW} style={styles.container}>
-      <MHeader
-        rightContent={{
-          isPress: true,
-          title: 'SKIP',
-          titleStyle: styles.rightTitleHeader,
-          onPress: onSkip
-        }}
-      />
+      <MHeader />
       <MView
         type={VIEW_TYPE.SCROLL_VIEW}
         style={{ flex: 1 }}
@@ -40,13 +44,13 @@ const WelcomeScreen = () => {
           style={styles.container}>
           <MView style={styles.bodyContainer}>
             <MImage source={IMG_AppLogo} />
-            <MButton style={styles.buttonBody}>
+            <MButton style={styles.buttonBody} onPress={onGoogleLogin}>
               <MView style={styles.contentButtonGoogle}>
                 <MImage source={IMG_Google} />
                 <MText>Log With Google</MText>
               </MView>
             </MButton>
-            <MButton style={[styles.buttonBody, { marginTop: scale(0) }]}>
+            <MButton style={[styles.buttonBody, { marginTop: scale(0) }]} onPress={onEmailLogin}>
               <MText>Log With Email</MText>
             </MButton>
             <MView style={styles.containerDivide}>
@@ -60,9 +64,14 @@ const WelcomeScreen = () => {
                 title={'Mobile number'}
                 placeholder={'+84 ...'}
                 inputStyle={styles.inputMobile}
+                value={phone}
+                onChangeText={text => setPhone(text)}
               />
             </MView>
           </MView>
+          <MButton style={styles.buttonNext} onPress={onPhoneLogin}>
+            <MImage source={IC_Next} tintColor={COLORS.WHITE} />
+          </MButton>
         </MView>
       </MView>
       <MView style={styles.containerTitleBottom}>

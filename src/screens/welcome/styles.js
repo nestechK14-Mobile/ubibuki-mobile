@@ -50,10 +50,10 @@ const styles = StyleSheet.create({
     fontSize: SPACING.Medium
   },
   bottomContainer: {
-    flex: 1,
     alignItems: 'center',
     marginTop: SPACING.Medium,
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
+    height: scale(60)
   },
   containerInput: {
     alignItems: 'flex-start',
@@ -84,6 +84,14 @@ const styles = StyleSheet.create({
     fontFamily: FONTS_NAMES.REGULAR,
     marginHorizontal: scale(4),
     textDecorationLine: 'underline'
+  },
+  buttonNext: {
+    backgroundColor: COLORS.RED_500,
+    padding: SPACING.Medium,
+    borderRadius: SPACING.Large,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: SPACING.Normal
   }
 });
 

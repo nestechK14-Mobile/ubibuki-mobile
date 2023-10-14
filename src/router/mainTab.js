@@ -1,4 +1,4 @@
-import { SCREENS_NAME, SCREEN_STACK } from '@/constants';
+import { SCREEN_STACK } from '@/constants';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import BookingsStack from './stack/bookingsStack';
