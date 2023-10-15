@@ -13,8 +13,7 @@ const styles = StyleSheet.create({
     fontSize: SPACING.XMedium
   },
   bodyContainer: {
-    alignItems: 'center',
-    marginVertical: SPACING.XXMedium
+    alignItems: 'center'
   },
   buttonBody: {
     flexDirection: 'row',
@@ -29,7 +28,7 @@ const styles = StyleSheet.create({
   contentButtonGoogle: {
     flexDirection: 'row',
     alignItems: 'center',
-    width: scale(167),
+    width: scale(180),
     justifyContent: 'space-around'
   },
   containerDivide: {
@@ -39,9 +38,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   lineDivide: {
-    height: scale(1),
+    height: scale(0.5),
     backgroundColor: COLORS.BLACK,
-    width: DEVICE.WIDTH * 0.3
+    width: DEVICE.WIDTH * 0.45 - scale(32)
   },
   titleDivide: {
     backgroundColor: COLORS.WHITE,

@@ -1,7 +1,18 @@
 {
   "translation": {
-    "common": {
-      "hello": "Xin chào"
+    "COMMON": {
+      "OR": "Hoặc",
+      "MOBILE_NUMBER": "Số điện thoại",
+      "AND": "và"
+    },
+    "WELCOME": {
+      "SIGN_IN_GOOGLE": "Đăng nhập với Google",
+      "SIGN_IN_EMAIL": "Đăng nhập với Email",
+      "AGREE_CONDITION": {
+        "FIRST_SENTENCES": "Tôi đồng ý với",
+        "TERM_CONDITIONS": "Điều khoản & Điều kiện",
+        "PRIVACY_POLICY": "Chính sách quyền riêng tư"
+      }
     }
   }
 }

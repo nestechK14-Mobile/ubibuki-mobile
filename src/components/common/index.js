@@ -5,3 +5,4 @@ export { default as MInput } from './MInput';
 export { default as MLoading } from './MLoading';
 export { default as MText } from './MText';
 export { default as MView } from './MView';
+export { default as PinCode } from './PinCode';

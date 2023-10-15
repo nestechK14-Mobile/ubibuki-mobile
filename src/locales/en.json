@@ -1,7 +1,18 @@
 {
   "translation": {
-    "common": {
-      "hello": "Hello"
+    "COMMON": {
+      "OR": "or",
+      "MOBILE_NUMBER": "Mobile number",
+      "AND": "and"
+    },
+    "WELCOME": {
+      "SIGN_IN_GOOGLE": "Sign in With Google",
+      "SIGN_IN_EMAIL": "Sign in With Email",
+      "AGREE_CONDITION": {
+        "FIRST_SENTENCES": "I agree to the",
+        "TERM_CONDITIONS": "Term & Conditions",
+        "PRIVACY_POLICY": "Privacy Policy"
+      }
     }
   }
 }

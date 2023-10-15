@@ -5,7 +5,15 @@ import MView from '../MView';
 import styles from './styles';
 
 const MInput = props => {
-  const { containerInput = {}, title, titleStyle = {}, inputStyle = {}, ...rest } = props;
+  const {
+    containerInput = {},
+    title,
+    titleStyle = {},
+    inputStyle = {},
+    errorText = '',
+    errorTitleStyle = '',
+    ...rest
+  } = props;
   return (
     <MView style={[styles.container, containerInput]}>
       <MText style={titleStyle} {...rest}>
@@ -14,6 +22,9 @@ const MInput = props => {
       <MView style={inputStyle}>
         <TextInput autoComplete="off" {...rest} />
       </MView>
+      <MText style={[styles.errorText, errorTitleStyle]} {...rest}>
+        {errorText}
+      </MText>
     </MView>
   );
 };

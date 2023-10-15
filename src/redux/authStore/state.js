@@ -1,5 +1,9 @@
 export const initialState = {
   loading: false,
-  phoneNumber: '',
-  errorMessage: ''
+  errorMessage: undefined,
+  user: {
+    phoneNumber: '',
+    email: ''
+  },
+  isNewUser: false
 };

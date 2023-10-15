@@ -12,7 +12,12 @@
           "package_name": "com.dummyproject"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "286112083263-04crqqd4630kdd4cc4ig4nu4sfgb6aqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCiT_QS3de6Rf5D1RBdSOwYyKk8uZR_jSA"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286112083263-04crqqd4630kdd4cc4ig4nu4sfgb6aqe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

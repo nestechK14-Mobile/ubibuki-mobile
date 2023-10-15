@@ -1,22 +1,58 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { initialState } from './state';
-import { ACTION_AUTHENTICATION } from './actionTypes';
-import { signUpEmail } from '@/services/auth';
-
-export const signUpWithEmail = createAsyncThunk(ACTION_AUTHENTICATION.SIGN_UP, async params => {
-  const { email, password } = params;
-  console.log('email', email);
-  console.log('password', password);
-  const response = await signUpEmail(email, password);
-  console.log(response);
-
-  return response;
-});
+import { signInEmail, signInWithGoogle, signUpEmail } from '@/services/auth';
 
 const authSlice = createSlice({
   name: 'auth',
   initialState,
-  reducers: {}
+  reducers: {
+    signUpEmails: async (state, action) => {
+      const { payload } = action;
+      const { email, password } = payload;
+
+      state.loading = true;
+
+      try {
+        const response = await signUpEmail(email, password);
+        if (response) {
+          const { user } = response;
+          state.user = user;
+          state.loading = false;
+        }
+      } catch (error) {
+        state.errorMessage = error;
+        state.loading = false;
+      }
+    },
+    signInEmails: async (state, action) => {
+      const { payload } = action;
+      const { email, password } = payload;
+      try {
+        const response = await signInEmail(email, password);
+        if (response) {
+          const { user } = response;
+          state.user = user;
+          state.loading = false;
+        }
+      } catch (error) {
+        state.errorMessage = error;
+        state.loading = false;
+      }
+    },
+    signInGoogle: async (state, action) => {
+      state.loading = true;
+      try {
+        const response = await signInWithGoogle();
+        state.loading = true;
+        console.log(response, 'res');
+      } catch (error) {
+        state.errorMessage = error;
+        state.loading = false;
+      }
+    }
+  }
 });
+
+export const { signUpEmails, signInEmails, signInGoogle } = authSlice.actions;
 
 export default authSlice.reducer;
