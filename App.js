@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
-import { Text, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { FlatList, Image, Text, View } from 'react-native';
 
 const App = () => {
+  const [data, setData] = useState({});
   const getListMovie = async () => {
     const url = 'https://moviesdatabase.p.rapidapi.com/titles?page=2';
     const options = {
@@ -14,9 +15,10 @@ const App = () => {
 
     try {
       const response = await fetch(url, options);
-      console.log('>>>>>> ', response.json());
-      const result = await response.text();
-      console.log(result);
+      if (response) {
+        const result = await response.json();
+        setData(result?.results);
+      }
     } catch (error) {
       console.error(error);
     }
@@ -30,9 +32,18 @@ const App = () => {
     getListMovie();
   }, []);
 
+  const renderItem = ({ item }) => {
+    return (
+      <View>
+        <Text>{item?.titleText?.text ?? '-'}</Text>
+        <Image source={{ uri: item?.primaryImage?.url }} style={{ width: 100, height: 100 }} />
+      </View>
+    );
+  };
+
   return (
     <View>
-      <Text>App</Text>
+      <FlatList data={data} renderItem={renderItem} />
     </View>
   );
 };
