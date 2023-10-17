@@ -28,7 +28,11 @@ const MHeader = props => {
                 </MText>
               )}
               {leftContent.icon && (
-                <MImage source={leftContent.icon} style={leftContent.iconStyle} />
+                <MImage
+                  source={leftContent.icon}
+                  imageStyle={leftContent.iconStyle}
+                  tintColor={'black'}
+                />
               )}
             </MButton>
           )}
@@ -40,7 +44,7 @@ const MHeader = props => {
                 </MText>
               )}
               {leftContent.icon && (
-                <MImage source={leftContent.icon} style={leftContent.iconStyle} />
+                <MImage source={leftContent.icon} imageStyle={leftContent.iconStyle} />
               )}
             </MView>
           )}
@@ -60,7 +64,7 @@ const MHeader = props => {
                 </MText>
               )}
               {rightContent.icon && (
-                <MImage source={rightContent.icon} style={rightContent.iconStyle} />
+                <MImage source={rightContent.icon} imageStyle={rightContent.iconStyle} />
               )}
             </MButton>
           )}
@@ -72,7 +76,7 @@ const MHeader = props => {
                 </MText>
               )}
               {rightContent.icon && (
-                <MImage source={rightContent.icon} style={rightContent.iconStyle} />
+                <MImage source={rightContent.icon} imageStyle={rightContent.iconStyle} />
               )}
             </MView>
           )}

@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: SPACING.Medium,
     justifyContent: 'space-around',
-    height: scale(60)
+    height: scale(90)
   },
   containerInput: {
     alignItems: 'flex-start',

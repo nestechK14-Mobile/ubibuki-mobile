@@ -40,11 +40,14 @@ const authSlice = createSlice({
       }
     },
     signInGoogle: async (state, action) => {
+      console.log(action, 'action');
       state.loading = true;
       try {
         const response = await signInWithGoogle();
-        state.loading = true;
-        console.log(response, 'res');
+        if (response) {
+          // state.loading = true;
+          console.log(JSON.parse(response), 'res');
+        }
       } catch (error) {
         state.errorMessage = error;
         state.loading = false;

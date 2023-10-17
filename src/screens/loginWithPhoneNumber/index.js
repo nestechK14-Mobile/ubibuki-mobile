@@ -1,5 +1,5 @@
 import React from 'react';
-import { MHeader, MView } from '@/components';
+import { MHeader, MText, MView } from '@/components';
 import styles from './styles';
 import { IC_Back } from '@/assets';
 import { useNavigation } from '@react-navigation/native';
@@ -15,10 +15,14 @@ const LoginWithPhoneNumber = () => {
     <MView style={styles.container}>
       <MHeader
         leftContent={{
-          icon: IC_Back,
-          onPress: goBack
+          title: 'Back',
+          onPress: goBack,
+          iconStyle: styles.leftHeader
         }}
       />
+      <MView>
+        <MText>123</MText>
+      </MView>
     </MView>
   );
 };
