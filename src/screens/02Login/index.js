@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native';
-import styles from '../02Login/styles';
+import styles from './styles';
 
 const Login = () => {
   const navigation = useNavigation();

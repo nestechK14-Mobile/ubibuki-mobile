@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import InputNumber from '../../screens/04InputNumber';
+import InputNumber from '../../screens/04Flatlist';
 
 const Stack01Router = createNativeStackNavigator();
 

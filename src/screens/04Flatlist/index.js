@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, Image, FlatList } from 'react-native';
-import styles from '../04InputNumber/styles';
+import { View, Text, Image, FlatList, TouchableOpacity } from 'react-native';
+import styles from './styles';
+import { useNavigation } from '@react-navigation/native';
 
-const ImageList = () => {
-  const [images, setImages] = useState([
+const FlatList1 = () => {
+  const [images] = useState([
     { id: '1', src: require('../../assets/HinhPhimScroll.png') },
     { id: '2', src: require('../../assets/HinhPhimScroll.png') },
     { id: '3', src: require('../../assets/HinhPhimScroll.png') }
@@ -15,12 +16,17 @@ const ImageList = () => {
       </View>
     );
   };
-
+  const navigation = useNavigation();
+  const pressMove = () => {
+    navigation.navigate('OTPNumber');
+  };
   return (
     <View>
       <View style={styles.header}>
         <Image source={require('../../assets/LogoTimeMovie.png')} />
-        <Image source={require('../../assets/SearchIcon.png')} />
+        <TouchableOpacity onPress={pressMove}>
+          <Text>SKIP</Text>
+        </TouchableOpacity>
       </View>
       <View style={{ alignItems: 'center', justifyContent: 'center' }}>
         <FlatList
@@ -33,4 +39,4 @@ const ImageList = () => {
     </View>
   );
 };
-export default ImageList;
+export default FlatList1;

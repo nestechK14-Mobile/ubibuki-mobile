@@ -1,6 +1,6 @@
 import { View, Image, ImageBackground } from 'react-native';
 import React, { useEffect } from 'react';
-import styles from '../../screens/01LogoMVT/styles';
+import styles from './styles';
 import { useNavigation } from '@react-navigation/native';
 
 const LogoMVT = () => {

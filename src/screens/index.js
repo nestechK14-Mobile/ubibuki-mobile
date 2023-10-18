@@ -1,6 +1,6 @@
 export { default as Login } from './02Login';
-export { default as LogoMVT } from './01LogoMVT';
-export { default as InputNumber } from './04InputNumber';
+export { default as LogoMVT } from './01FlashCreen';
+export { default as Flastlist1 } from './04Flatlist';
 export { default as AfterLogin } from './03AfterLogin/';
 export { default as OTPNumber } from './05OTPNumber';
 export { default as ChoseCity } from './06ChoseCity';

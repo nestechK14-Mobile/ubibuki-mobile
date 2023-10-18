@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LogoMVT from './src/screens/01LogoMVT';
+import LogoMVT from './src/screens/01FlashCreen';
 import Login from './src/screens/02Login';
 import AfterLogin from './src/screens/03AfterLogin';
-import InputNumber from './src/screens/04InputNumber';
+import InputNumber from './src/screens/04Flatlist';
 import OTPNumber from './src/screens/05OTPNumber';
 import ChooseCity from './src/screens/06ChoseCity';
 import Mainmenu from './src/screens/07Mainmenu';
