@@ -5,7 +5,7 @@ import LogoMVT from './src/screens/01FlashCreen';
 import Login from './src/screens/02Login';
 import AfterLogin from './src/screens/03AfterLogin';
 import InputNumber from './src/screens/04Flatlist';
-import OTPNumber from './src/screens/05Tap';
+import OTPNumber from './src/screens/05Tab';
 import ChooseCity from './src/screens/06ChoseCity';
 import Mainmenu from './src/screens/07Mainmenu';
 import ChooseOption from './src/screens/08ChooseOption';

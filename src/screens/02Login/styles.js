@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
   ViewGGLogin: {
     margin: 10,
-    backgroundColor: '#888888',
+    backgroundColor: '#00000007',
     borderRadius: 20
   },
   line: {

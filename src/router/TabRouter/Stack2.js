@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import OTPNumber from '../../screens/05Tap';
+import OTPNumber from '../../screens/05Tab';
 
 const Stack01Router = createNativeStackNavigator();
 
