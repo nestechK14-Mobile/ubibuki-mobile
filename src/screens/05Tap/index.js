@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-const OTPNumber = () => {
+const Tab = () => {
   return (
     <View>
       <Text>DetailScreen</Text>
@@ -9,4 +9,4 @@ const OTPNumber = () => {
   );
 };
 
-export default OTPNumber;
+export default Tab;

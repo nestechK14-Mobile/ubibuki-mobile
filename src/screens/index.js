@@ -2,7 +2,7 @@ export { default as Login } from './02Login';
 export { default as LogoMVT } from './01FlashCreen';
 export { default as Flastlist1 } from './04Flatlist';
 export { default as AfterLogin } from './03AfterLogin/';
-export { default as OTPNumber } from './05OTPNumber';
+export { default as Tab } from './05Tap';
 export { default as ChoseCity } from './06ChoseCity';
 export { default as Mainmenu } from './07Mainmenu';
 export { default as ChooseOption } from './08ChooseOption';
