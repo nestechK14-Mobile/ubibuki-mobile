@@ -7,3 +7,5 @@ export { default as ChoseCity } from './06ChoseCity';
 export { default as Mainmenu } from './07Mainmenu';
 export { default as ChooseOption } from './08ChooseOption';
 export { default as TabRouter } from './../router/TabRouter';
+export { default as Creen } from '../screens/05Tab/creen/index';
+export { default as TabTab } from '../screens/05Tab/Tab/index';

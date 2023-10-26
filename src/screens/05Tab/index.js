@@ -1,12 +1,16 @@
-import { View, Text } from 'react-native';
 import React from 'react';
+import { View } from 'react-native';
+import TabTab from '../05Tab/Tab/index';
+import Creen from '../05Tab/creen/index';
+import styles from '../05Tab/style';
 
-const Tab = () => {
+const Test = () => {
   return (
-    <View>
-      <Text>DetailScreen</Text>
+    <View style={styles.container}>
+      <Creen />
+      <TabTab />
     </View>
   );
 };
 
-export default Tab;
+export default Test;
