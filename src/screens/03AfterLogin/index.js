@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 const AfterLogin = () => {
   const navigation = useNavigation();
   const pressToScreenInput = () => {
-    navigation.navigate('InputNumber');
+    navigation.navigate('MyTabs');
   };
   return (
     <View style={styles.tong}>

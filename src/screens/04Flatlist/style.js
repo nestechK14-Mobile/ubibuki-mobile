@@ -1,10 +1,9 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 8
+  container: {
+    flex: 1,
+    backgroundColor: 'white'
   }
 });
 
