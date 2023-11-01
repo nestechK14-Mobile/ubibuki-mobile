@@ -17,28 +17,25 @@ import MovieTimeListing from 'screens/08_MovieTimeListing';
 import AboutMovie from 'screens/09_AboutMovie';
 import TermAndCondition from 'screens/10_TermAndCondition';
 
-
 import PrivatePolicy from 'screens/11_PrivatePolicy';
 const MainStack = createNativeStackNavigator();
 
 const MainRouter = () => {
   return (
-    <MainStack.Navigator screenOptions={{ 
-      headerStyle: {
-        backgroundColor: '#f4511e'
-      },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold'
-      },
-    
-      headerShown: false }}>
+    <MainStack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#f4511e'
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold'
+        },
 
-      
-      
-      
-      <MainStack.Screen name={SCREEN_NAME.MOVIE_SELECT} component={MovieSelect} />
+        headerShown: false
+      }}>
       <MainStack.Screen name={SCREEN_NAME.LOGIN} component={Login} />
+      <MainStack.Screen name={SCREEN_NAME.MOVIE_SELECT} component={MovieSelect} />
       <MainStack.Screen name={SCREEN_NAME.ACCOUNT_SELECT} component={AccountSelect} />
       <MainStack.Screen name={SCREEN_NAME.TYPE_MOBILE_NUMBER} component={TypeMobileNumber} />
       <MainStack.Screen name={SCREEN_NAME.VERIFY_MOBILE_NUMBER} component={VerifyMobileNumber} />
@@ -47,7 +44,6 @@ const MainRouter = () => {
       <MainStack.Screen name={SCREEN_NAME.ABOUT_MOVIE} component={AboutMovie} />
       <MainStack.Screen name={SCREEN_NAME.TERM_AND_CONTDITION} component={TermAndCondition} />
       <MainStack.Screen name={SCREEN_NAME.PRIVATE_POLICY} component={PrivatePolicy} />
-
 
       <MainStack.Screen name={SCREEN_NAME.WELCOME_SCREEN} component={WelcomeScreen} />
       <MainStack.Screen name={SCREEN_NAME.HOME_SCREEN} component={HomeScreen} />
