@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "756710815354",
+    "project_id": "moviebuf2023",
+    "storage_bucket": "moviebuf2023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756710815354:android:e84a0d5754092d25762dc3",
+        "android_client_info": {
+          "package_name": "com.dummyproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBohz6mY1BAikyJLmSztyA5NOd5nTQiyC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
